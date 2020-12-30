@@ -1,0 +1,25 @@
+{
+  "document": {
+    "object": "document",
+    "data": {},
+    "nodes": [
+      {
+        "object": "block",
+        "type": "paragraph",
+        "data": {},
+        "nodes": [
+          {
+            "object": "text",
+            "leaves": [
+              {
+                "object": "leaf",
+                "text": "This Song was written by Elizabeth Mastry with Drums, and slide Guitar add by Erik and Robin Summerfield",
+                "marks": []
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

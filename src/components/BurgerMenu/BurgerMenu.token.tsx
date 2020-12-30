@@ -32,7 +32,6 @@ const Icon = flow(
 const withBurgerMenuStyles = withDesign({
   Wrapper: flow(
     withPadding1,
-    asTealBackground,
     addClasses('relative'),
   ),
   Header: flow(

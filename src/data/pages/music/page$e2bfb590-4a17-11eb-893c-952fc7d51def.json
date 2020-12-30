@@ -1,0 +1,25 @@
+{
+  "document": {
+    "object": "document",
+    "data": {},
+    "nodes": [
+      {
+        "object": "block",
+        "type": "H2",
+        "data": {},
+        "nodes": [
+          {
+            "object": "text",
+            "leaves": [
+              {
+                "object": "leaf",
+                "text": "The Bier Town Recordings",
+                "marks": []
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

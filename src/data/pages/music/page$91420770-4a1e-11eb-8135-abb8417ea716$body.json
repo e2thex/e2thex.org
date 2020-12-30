@@ -5,7 +5,7 @@
     "nodes": [
       {
         "object": "block",
-        "type": "H1",
+        "type": "paragraph",
         "data": {},
         "nodes": [
           {
@@ -13,7 +13,7 @@
             "leaves": [
               {
                 "object": "leaf",
-                "text": "Personal Website of Erik Summerfield",
+                "text": "Written by Elizabeth Mastery with additions:",
                 "marks": []
               }
             ]
@@ -30,7 +30,24 @@
             "leaves": [
               {
                 "object": "leaf",
-                "text": "Page Content",
+                "text": "Robin Summerfield: Slide Guitar",
+                "marks": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "object": "block",
+        "type": "paragraph",
+        "data": {},
+        "nodes": [
+          {
+            "object": "text",
+            "leaves": [
+              {
+                "object": "leaf",
+                "text": "Erik Summerfield: Glockenspiel",
                 "marks": []
               }
             ]

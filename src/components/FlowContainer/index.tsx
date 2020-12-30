@@ -21,6 +21,7 @@ import withIframeVariations from './withIframeVariations';
 import withYouTubeVariations from './withYouTubeVariations';
 
 import { asFlowContainerWithMargins } from './token';
+import withAudioVariations from './withAudioVariations';
 
 // Order of includes currently dictates order in Component Picker
 // thus recommend putting more frequently used components toward top for quicker access.
@@ -31,6 +32,7 @@ const FlowContainerDefault = flow(
   asFlowContainerWithMargins,
   withIframeVariations,
   withYouTubeVariations,
+  withAudioVariations,
   withMandatoryCategories(['Orientation', 'Type']),
 )(FlowContainer);
 

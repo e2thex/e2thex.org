@@ -29,6 +29,7 @@
     "@bodiless/richtext-ui": "^0.0.66",
     "@bodiless/search": "^0.0.66",
     "@bodiless/ui": "^0.0.66",
+    "react-h5-audio-player": "^3.5.0",
     "cross-env": "^5.2.0",
     "docsify-cli": "^4.3.0",
     "dotenv": "^8.2.0",

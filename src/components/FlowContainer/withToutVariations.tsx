@@ -23,6 +23,7 @@ import {
   extendDesign,
   replaceWith,
   withDesign,
+  remove,
 } from '@bodiless/fclasses';
 import Tout from '../Tout';
 import {
@@ -33,8 +34,12 @@ import {
   asToutNoBody,
   asToutNoBodyNoTitle,
   asToutDefaultStyle,
+  asToutOverlayCta,
+  asToutOverlayTitle,
 } from '../Tout/token';
 import { withType } from './Categories';
+import AudioPlayer from '../AudioPlayer';
+import { Fragment } from 'react';
 
 export const withStructureFacet = withFacet('Tout Structure');
 export const withOrientationFacet = withFacet('Orientation');
@@ -47,16 +52,34 @@ const baseVariation = {
   ),
 };
 
+const withAudio = withDesign({
+  Link: replaceWith(AudioPlayer),
+});
+const asToutNoImage = withDesign({
+  Image: remove,
+});
 // Lets make Tout version that are Vertical and vary the fields that are used
 const verticalVariations = varyDesign(
   {
     Vertical: withOrientationFacet('Vertical')(asToutVertical as HOC),
   },
   {
-    WithTitleBody: withStructureFacet('With Title and Body')(),
+    ...varyDesign({
+      '': withFacet('Overlay')('No Overlay')(),
+      OverlayTitle: withFacet('Overlay')('Title')(asToutOverlayTitle as HOC),
+
+    })({
+      '': withStructureFacet('With Title')(),
+    }),
     NoTitle: withStructureFacet('No Title')(asToutNoTitle as HOC),
+  },
+  {
+    '': withStructureFacet('With Body')(),
     NoBody: withStructureFacet('No Body')(asToutNoBody as HOC),
-    NoTitleBody: withStructureFacet('No Title and Body')(asToutNoBodyNoTitle as HOC),
+  },
+  {
+    '': withStructureFacet('With Image')(),
+    NoImage: withStructureFacet('No Image')(asToutNoImage as HOC),
   },
 );
 // Lets make Tout version that are Horizontal and vary the fields that are used
@@ -65,8 +88,11 @@ const horizontalVariations = varyDesign(
     Horizontal: withOrientationFacet('Horizontal')(asToutHorizontal as HOC),
   },
   {
-    WithTitleBody: withStructureFacet('With Title and Body')(),
+    '': withStructureFacet('With Title')(),
     NoTitle: withStructureFacet('No Title')(asToutNoTitle as HOC),
+  },
+  {
+    '': withStructureFacet('With Body')(),
     NoBody: withStructureFacet('No Body')(asToutNoBody as HOC),
   },
 );
@@ -77,8 +103,9 @@ const orientationVariations = extendDesign(
 );
 
 const ctaVariations = {
-  WithCTA: withStructureFacet('With CTA')(),
+  '': withStructureFacet('With CTA')(),
   NoCTA: withStructureFacet('No CTA')(asToutNoCta as HOC),
+  WithAudio: withStructureFacet('with Audio CTA')(withAudio),
 };
 
 export default withDesign(varyDesign(
