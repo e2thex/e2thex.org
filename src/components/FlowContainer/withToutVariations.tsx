@@ -22,8 +22,10 @@ import {
   varyDesign,
   extendDesign,
   replaceWith,
+  startWith,
   withDesign,
   remove,
+  H1,
 } from '@bodiless/fclasses';
 import Tout from '../Tout';
 import {
@@ -32,16 +34,15 @@ import {
   asToutNoTitle,
   asToutNoCta,
   asToutNoBody,
-  asToutNoBodyNoTitle,
   asToutDefaultStyle,
-  asToutOverlayCta,
   asToutOverlayTitle,
+  asToutTitleSecondaryOverlay,
+  asToutTitlePrimaryOverlay,
 } from '../Tout/token';
 import { withType } from './Categories';
 import AudioPlayer from '../AudioPlayer';
-import { Fragment } from 'react';
+import { asHeader1 } from '../Elements.token';
 
-export const withStructureFacet = withFacet('Tout Structure');
 export const withOrientationFacet = withFacet('Orientation');
 
 const baseVariation = {
@@ -58,30 +59,46 @@ const withAudio = withDesign({
 const asToutNoImage = withDesign({
   Image: remove,
 });
-// Lets make Tout version that are Vertical and vary the fields that are used
-const verticalVariations = varyDesign(
-  {
-    Vertical: withOrientationFacet('Vertical')(asToutVertical as HOC),
-  },
-  {
-    ...varyDesign({
-      '': withFacet('Overlay')('No Overlay')(),
-      OverlayTitle: withFacet('Overlay')('Title')(asToutOverlayTitle as HOC),
+const asToutPrimary = withDesign({
+  Title: flow(startWith(H1), asHeader1),
+});
 
-    })({
-      '': withStructureFacet('With Title')(),
-    }),
+export const withStructureFacet = withFacet('Structure');
+
+const bodyVariations = {
+  '': withStructureFacet('With Body')(),
+  NoBody: withStructureFacet('No Body')(asToutNoBody as HOC),
+};
+const verticalTitleVariations = 
+{
+  ...varyDesign({
+    NormalText: withFacet('Overlay')('Normal Title Text')(asToutTitleSecondaryOverlay),
+    InvertedText: withFacet('Overlay')('Inverted Title Text')(asToutTitlePrimaryOverlay),
+  })({
+    OverlayTitle: flow(
+      withFacet('Overlay')('Title')(asToutOverlayTitle as HOC),
+      withStructureFacet('With Title')(),
+      withStructureFacet('With Image')()
+    ),
+
+  }),
+  ...varyDesign({
+    '': withFacet('Overlay')('No Overlay')(),
+  },{
+    '': withStructureFacet('With Title')(),
     NoTitle: withStructureFacet('No Title')(asToutNoTitle as HOC),
-  },
-  {
-    '': withStructureFacet('With Body')(),
-    NoBody: withStructureFacet('No Body')(asToutNoBody as HOC),
-  },
-  {
+  })({
     '': withStructureFacet('With Image')(),
     NoImage: withStructureFacet('No Image')(asToutNoImage as HOC),
+  }),
+};
+export const verticalVariations = varyDesign(
+  {
+    Vertical: withOrientationFacet('Vertical')(asToutVertical),
   },
-);
+  bodyVariations,
+  verticalTitleVariations
+)();
 // Lets make Tout version that are Horizontal and vary the fields that are used
 const horizontalVariations = varyDesign(
   {
@@ -91,10 +108,7 @@ const horizontalVariations = varyDesign(
     '': withStructureFacet('With Title')(),
     NoTitle: withStructureFacet('No Title')(asToutNoTitle as HOC),
   },
-  {
-    '': withStructureFacet('With Body')(),
-    NoBody: withStructureFacet('No Body')(asToutNoBody as HOC),
-  },
+  bodyVariations,
 );
 // LEts combine the Vertical and Horizontal
 const orientationVariations = extendDesign(
@@ -108,8 +122,14 @@ const ctaVariations = {
   WithAudio: withStructureFacet('with Audio CTA')(withAudio),
 };
 
+const primaryVariations = {
+  'HeaderPrimary': withFacet('Header')('Primary')(asToutPrimary),
+  '': withFacet('Header')('Secondary')(),
+}
+
 export default withDesign(varyDesign(
   baseVariation,
   orientationVariations,
   ctaVariations,
+  primaryVariations,
 )());

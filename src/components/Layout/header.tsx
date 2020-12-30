@@ -24,6 +24,7 @@ import { withNodeKey } from '@bodiless/core';
 import { ResponsiveSimpleMenu } from '../Menu';
 import { ResponsiveSearchBox } from '../Search';
 import Logo from './logo';
+import SocialShare from '../SocialShare';
 
 type HeaderComponents = {
   Wrapper: ComponentType<any>,
@@ -61,6 +62,7 @@ const HeaderClean: FC<Props> = ({ components }) => {
       <Container>
         <SiteLogoReturn />
         <SearchContainer>
+          <SocialShare />
           <Search placeholder="Search" />
         </SearchContainer>
         <MenuContainer>

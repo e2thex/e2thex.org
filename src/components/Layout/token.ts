@@ -20,6 +20,7 @@ import {
 import {
   asPageContainer,
   asPrimaryColorBackground,
+  asSecondaryColorBackground,
   asTealBackground,
 } from '../Elements.token';
 
@@ -33,16 +34,17 @@ const asSiteHeader = withDesign({
   Wrapper: asPrimaryColorBackground,
   Container: flow(
     asPageContainer,
-    asTealBackground,
-    addClasses('flex justify-between h-12 lg:h-auto items-center flex-wrap lg:bg-transparent px-4 lg:px-0'),
+    addClasses('flex justify-between h-12 lg:h-auto items-center flex-wrap px-4 lg:px-0'),
   ),
-  SearchContainer: addClasses('order-1 h-full lg:h-auto'),
-  MenuContainer: addClasses('lg:w-full lg:order-1'),
+  SearchContainer: addClasses('order-1 h-full lg:h-auto flex'),
+  MenuContainer: flow(
+    addClasses('lg:w-full lg:order-1'),
+  ),
   SiteLogoReturn: asDefaultLogoStyle,
 });
 
 const asSiteFooter = withDesign({
-  Wrapper: asPrimaryColorBackground,
+  // Wrapper: asSecondaryColorBackground,
   Container: flow(asPageContainer, addClasses('py-3')),
 });
 

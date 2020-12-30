@@ -1,25 +1,20 @@
-{
-  "document": {
-    "object": "document",
+[
+  {
     "data": {},
-    "nodes": [
+    "type": "H2",
+    "children": [
       {
-        "object": "block",
-        "type": "H2",
-        "data": {},
-        "nodes": [
-          {
-            "object": "text",
-            "leaves": [
-              {
-                "object": "leaf",
-                "text": "The Bier Town Recordings",
-                "marks": []
-              }
-            ]
-          }
-        ]
+        "text": "The Bier Town Recordings"
+      }
+    ]
+  },
+  {
+    "data": {},
+    "type": "paragraph",
+    "children": [
+      {
+        "text": "All of these songs were record in Rawling MD in around 2007ish when me, Cristina, my friend Liz went to visit family in Western MD."
       }
     ]
   }
-}
+]

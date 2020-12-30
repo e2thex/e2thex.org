@@ -5,28 +5,21 @@
       "wrapperProps": {
         "className": "w-full"
       },
-      "type": "LandscapeImage"
-    },
-    {
-      "uuid": "a9c7b9c0-4942-11eb-abd2-114680d64047",
-      "wrapperProps": {
-        "className": "w-full"
-      },
-      "type": "EditorFullFeatured"
+      "type": "ToutVerticalNoBodyOverlayTitleInvertedTextNoCTAHeaderPrimary"
     },
     {
       "uuid": "2d2380b0-4943-11eb-abd2-114680d64047",
       "wrapperProps": {
         "className": "w-full lg:w-1/2"
       },
-      "type": "ToutVerticalNoTitleNoBodyWithCTA"
+      "type": "ToutVerticalNoBodyNoTitle"
     },
     {
       "uuid": "f26c7c70-4941-11eb-abd2-114680d64047",
       "wrapperProps": {
         "className": "w-full lg:w-1/2"
       },
-      "type": "ToutVerticalNoTitleNoBodyWithCTAWithAudio"
+      "type": "ToutVerticalNoBodyNoTitle"
     }
   ]
 }

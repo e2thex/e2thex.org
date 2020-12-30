@@ -196,6 +196,7 @@ const EditDiv = props => {
 const Audio = flow(
   ifEditable(replaceWith(EditDiv)),
   asBodilessComponent(options)(),
+  stylable,
 )(AudioPlayer);
 
 export default Audio;

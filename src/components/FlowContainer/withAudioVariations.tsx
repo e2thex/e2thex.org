@@ -24,6 +24,7 @@ import {
   replaceWith,
   withDesign,
   remove,
+  addClasses
 } from '@bodiless/fclasses';
 import Tout from '../Tout';
 import {
@@ -32,17 +33,25 @@ import {
   asToutNoBody,
   asToutDefaultStyle,
   asToutOverlayTitle,
+  asToutTitleSecondaryOverlay,
+  asToutTitlePrimaryOverlay,
+  asToutNoImage,
 } from '../Tout/token';
 import { withType } from './Categories';
 import AudioPlayer from '../AudioPlayer';
+import { asYMargin } from '../Elements.token';
 
-export const withStructureFacet = withFacet('Audio Structure');
+export const withStructureFacet = withFacet('Structure');
 
 const withAudio = withDesign({
-  Link: replaceWith(AudioPlayer),
+  Link: flow(
+    replaceWith(AudioPlayer),
+    
+    asYMargin,
+    ),
 });
 const baseVariation = {
-  Tout: flow(
+  Audio: flow(
     replaceWith(Tout),
     withDesc('A way to tout a call to Action.\n'),
     withType('Audio')(asToutDefaultStyle, withAudio, asToutVertical),
@@ -52,16 +61,22 @@ const bodyVariations = {
   '': withStructureFacet('With Body')(),
   NoBody: withStructureFacet('No Body')(asToutNoBody as HOC),
 };
-const asToutNoImage = withDesign({
-  Image: remove,
-});
 const titleVariations = 
 {
   ...varyDesign({
-    '': withFacet('Overlay')('No Overlay')(),
-    OverlayTitle: withFacet('Overlay')('Title')(asToutOverlayTitle as HOC),
-  })({'': flow(withStructureFacet('With Title')(), withStructureFacet('WithImage')())}),
+    NormalText: withFacet('Overlay')('Normal Title Text')(asToutTitleSecondaryOverlay),
+    InvertedText: withFacet('Overlay')('Inverted Title Text')(asToutTitlePrimaryOverlay),
+  })({
+    OverlayTitle: flow(
+      withFacet('Overlay')('Title')(asToutOverlayTitle as HOC),
+      withStructureFacet('With Title')(),
+      withStructureFacet('With Image')()
+    ),
+
+  }),
   ...varyDesign({
+    '': withFacet('Overlay')('No Overlay')(),
+  },{
     '': withStructureFacet('With Title')(),
     NoTitle: withStructureFacet('No Title')(asToutNoTitle as HOC),
   })({
@@ -69,6 +84,10 @@ const titleVariations =
     NoImage: withStructureFacet('No Image')(asToutNoImage as HOC),
   }),
 };
+export const VerticalVariations = varyDesign(
+  bodyVariations,
+  titleVariations
+)();
 
 export default withDesign(varyDesign(
   baseVariation,

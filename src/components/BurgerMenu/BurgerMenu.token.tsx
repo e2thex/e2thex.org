@@ -19,7 +19,7 @@ import {
 } from '@bodiless/fclasses';
 
 import { asDefaultLogoStyle } from '../Layout/token';
-import { asPrimaryColorBackground, withPadding1, asTealBackground } from '../Elements.token';
+import { asPrimaryColorBackground, withPadding1, asTealBackground, asSecondaryColorBackground } from '../Elements.token';
 
 const Icon = flow(
   addClasses('material-icons cursor-pointer align-middle text-white'),
@@ -36,10 +36,10 @@ const withBurgerMenuStyles = withDesign({
   ),
   Header: flow(
     asDefaultLogoStyle,
-    withDesign({ SiteReturn: asTealBackground }),
+    withDesign({ SiteReturn: asPrimaryColorBackground }),
   ),
   Menu: flow(
-    asPrimaryColorBackground,
+    asSecondaryColorBackground,
     addClasses('inset-0'),
     addProps({
       noOverlay: true,

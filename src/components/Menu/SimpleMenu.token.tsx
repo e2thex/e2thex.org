@@ -16,9 +16,9 @@ import { flow } from 'lodash';
 import { withDesign, addClasses } from '@bodiless/fclasses';
 import { withSimpleMenuDesign, useIsActiveTrail } from '@bodiless/organisms';
 
-import { ifToggledOn } from '@bodiless/core';
+import { ifToggledOn, ifToggledOff } from '@bodiless/core';
 import {
-  asBold, asLightTealBackgroundOnHover, asLightTealBackground, asTealBackground, asTextWhite,
+  asBold, asTextWhite, asSecondaryColorBackground, asPrimaryColorBackground, asPrimaryColorBackgroundOnHover, asTextColorSecondary, asTextColorPrimary, asTextColorPrimaryOnHover
 } from '../Elements.token';
 import { asUnderline } from '../ElementDefault.token';
 
@@ -27,9 +27,9 @@ import { asUnderline } from '../ElementDefault.token';
  * ===========================================
  */
 
-const withMenuBackground = asTealBackground;
-const withActiveMenuBackground = asLightTealBackground;
-const withHoverMenuBackground = asLightTealBackgroundOnHover;
+const withMenuBackground = flow(asSecondaryColorBackground, asTextColorSecondary);
+const withActiveMenuBackground = flow(asPrimaryColorBackground, asTextColorPrimary);
+const withHoverMenuBackground = flow(asPrimaryColorBackgroundOnHover, asTextColorPrimaryOnHover);
 const withMenuForeground = asTextWhite;
 
 /**
@@ -45,6 +45,9 @@ const withTitleStyles = flow(
 const withActiveTitleStyles = ifToggledOn(useIsActiveTrail)(
   withActiveMenuBackground, asBold, asUnderline,
 );
+const withNotActiveTitleStyles = ifToggledOff(useIsActiveTrail)(
+  withMenuBackground,
+);
 
 const withActiveSubTitleStyles = ifToggledOn(useIsActiveTrail)(
   withActiveMenuBackground, asBold,
@@ -57,12 +60,10 @@ const withActiveSubTitleStyles = ifToggledOn(useIsActiveTrail)(
 
 const withBaseMenuStyles = withDesign({
   Wrapper: flow(
-    withMenuBackground,
-    withMenuForeground,
     addClasses('w-full'),
   ),
   Item: addClasses('leading-loose text-sm'),
-  Title: flow(withTitleStyles, withActiveTitleStyles),
+  Title: flow(withActiveTitleStyles, withTitleStyles, withNotActiveTitleStyles),
 });
 
 /**
@@ -74,12 +75,11 @@ const withBaseSubMenuStyles = withDesign({
   Wrapper: withDesign({
     List: flow(
       withMenuBackground,
-      withMenuForeground,
       addClasses('z-10'),
     ),
   }),
   Item: addClasses('leading-loose text-sm'),
-  Title: flow(withTitleStyles, withActiveSubTitleStyles),
+  Title: flow(withActiveSubTitleStyles, withTitleStyles),
 });
 
 /**

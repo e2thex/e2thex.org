@@ -16,6 +16,7 @@ import { flow } from 'lodash';
 import {
   addClasses,
   withDesign,
+  remove,
 } from '@bodiless/fclasses';
 import {
   asToutVertical as asBToutVertical,
@@ -32,7 +33,9 @@ import {
   asCta,
   asHeader2,
   asBlockItem,
-  asTextColorPrimary,
+  asTextColorSecondary,
+  asPrimaryOverlay,
+  asSecondaryOverlay,
 } from '../Elements.token';
 
 const asToutHorizontal = flow(
@@ -52,9 +55,9 @@ const asToutVertical = flow(
 );
 
 const asToutDefaultStyle = withDesign({
-  Wrapper: asTextColorPrimary,
+  Wrapper: asTextColorSecondary,
   Image: asImageRounded,
-  Title: asHeader2,
+  Title: addClasses('text-2xl'),
   Link: asCta,
 });
 
@@ -72,6 +75,15 @@ const asToutMainMenu = flow(
   asToutDefaultStyle,
   asToutHorizontal,
 );
+const asToutNoImage = withDesign({
+  Image: remove,
+});
+const asToutTitlePrimaryOverlay = withDesign({
+  Title: asPrimaryOverlay,
+});
+const asToutTitleSecondaryOverlay = withDesign({
+  Title: asSecondaryOverlay,
+});
 
 export {
   asToutHorizontal,
@@ -86,4 +98,7 @@ export {
   asToutWithPaddings,
   asToutTextWhite,
   asToutMainMenu,
+  asToutNoImage,
+  asToutTitlePrimaryOverlay,
+  asToutTitleSecondaryOverlay,
 };

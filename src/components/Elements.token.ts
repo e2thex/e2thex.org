@@ -40,22 +40,29 @@ const asXMargin = addClasses('mx-2');
 const asYMargin = addClasses('my-2');
 const asNegXMargin = addClasses('-mx-1');
 const asNegYMargin = addClasses('-my-1');
-const withPadding1 = addClasses('py-1');
+const withPadding1 = addClasses('p-1');
 const withPadding3 = addClasses('p-3');
 const withPadding5 = addClasses('p-5');
 
 /* Responsive design */
 const asMobileOnly = addClasses('lg:hidden');
 const asDesktopOnly = flow(
-  addClasses('hidden lg:flex'),
+  addClasses('hidden lg:flex justify-end'),
   removeClasses('flex'),
 );
 
 /* Primary coloring */
-const asPrimaryColorBackground = addClasses('bg-gray-200');
-const asTextColorPrimary = addClasses('text-black');
-
+const asPrimaryColorBackground = addClasses('bg-black');
+const asTextColorPrimary = addClasses('text-white');
+const asSecondaryColorBackground = addClasses('bg-gray-300');
+const asTextColorSecondary = addClasses('text-black');
+const asPrimaryColorBackgroundOnHover = addClasses('hover:bg-gray-600');
+const asTextColorPrimaryOnHover = addClasses('hover:text-white');
+const asOverlay = addClasses('bg-opacity-50 p-2 rounded');
+const asPrimaryOverlay = flow(asPrimaryColorBackground, asTextColorPrimary, asOverlay);
+const asSecondaryOverlay = flow(asSecondaryColorBackground, asTextColorSecondary, asOverlay);
 /* Coloring */
+
 const asTextWhite = addClasses('text-white');
 const asTealBackground = addClasses('bg-teal-600');
 const asLightTealBackground = addClasses('bg-teal-500');
@@ -69,8 +76,8 @@ const asActiveMenuLink = flow(asBold, addClasses('bg-teal-500'));
 const asStrikeThrough = addClasses('');
 const asSuperScript = addClasses('');
 
-const asHeader1 = flow(addClasses('text-3xl'), asTextColorPrimary);
-const asHeader2 = addClasses('text-2xl');
+const asHeader1 = flow(addClasses('text-3xl'), asTextColorSecondary);
+const asHeader2 = addClasses('text-2xl bg-gradient-to-t from-gray-100 p-1 via-transparent border-b font-bold');
 const asHeader3 = addClasses('text-xl');
 
 /* BlockQuote */
@@ -88,7 +95,7 @@ const asEditableLink = asBodilessLink;
 const asEditable = asEditableCore;
 
 // Tout Components
-const asCta = addClasses('bg-orange-700 hover:bg-orange-600 text-center text-white p-2 rounded');
+const asCta = flow(addClasses('text-center p-2 rounded'), asPrimaryColorBackground, asPrimaryColorBackgroundOnHover, asTextColorPrimary);
 
 /* Utility Classes */
 const asDisabled = addClasses('pointer-events-none');
@@ -112,6 +119,7 @@ export {
   asBlockItem,
   asPageContainer,
   asPrimaryColorBackground,
+  asSecondaryColorBackground,
   asTealBackground,
   asLightTealBackground,
   asLightTealBackgroundOnHover,
@@ -137,4 +145,9 @@ export {
   asResponsive16By9Embed,
   asResponsive4By3Embed,
   asResponsive1By1Embed,
+  asPrimaryColorBackgroundOnHover,
+  asTextColorSecondary,
+  asTextColorPrimaryOnHover,
+  asSecondaryOverlay,
+  asPrimaryOverlay,
 };
