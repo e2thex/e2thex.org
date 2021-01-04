@@ -22,6 +22,9 @@ import withYouTubeVariations from './withYouTubeVariations';
 
 import { asFlowContainerWithMargins } from './token';
 import withAudioVariations from './withAudioVariations';
+import { replaceWith, withDesign } from '@bodiless/fclasses';
+import { withType } from './Categories';
+import Math from '../Tex';
 
 // Order of includes currently dictates order in Component Picker
 // thus recommend putting more frequently used components toward top for quicker access.
@@ -33,6 +36,9 @@ const FlowContainerDefault = flow(
   withIframeVariations,
   withYouTubeVariations,
   withAudioVariations,
+  withDesign({
+    Tex: withType('Text')(replaceWith(Tex)),
+  }),
   withMandatoryCategories(['Orientation', 'Type']),
 )(FlowContainer);
 

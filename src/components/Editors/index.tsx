@@ -20,6 +20,9 @@ import {
 import { RichText } from '@bodiless/richtext-ui';
 import {
   withDesign,
+  startWith,
+  styleable,
+  replaceWith,
 } from '@bodiless/fclasses';
 import {
   asBold,
@@ -35,7 +38,9 @@ import {
   asHeader1,
   asSuperScript,
   asEditableLink,
+  asTextColorPrimary,
 } from '../Elements.token';
+import Math from '../Math';
 import withEditor from './withEditor';
 
 const simpleDesign = {
@@ -71,6 +76,7 @@ const fullFeaturedDesign = {
   H1: asHeader1,
   H2: asHeader2,
   H3: asHeader3,
+  Math: flow(replaceWith(Math), withButton('functions'))
 };
 
 const EditorSimple = withDesign(simpleDesign)(RichText);

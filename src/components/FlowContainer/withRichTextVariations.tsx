@@ -33,6 +33,7 @@ import {
 import { withType } from './Categories';
 
 const richTextVariation = {
+  /*
   EditorSimple: flow(
     replaceWith(EditorSimple),
     ifComponentSelector(asPreview),
@@ -47,10 +48,11 @@ const richTextVariation = {
     withTitle('Basic Rich Text'),
     withDesc('Adds a block of text with basic formatting.\n'),
   ),
+  */
   EditorFullFeatured: flow(
     replaceWith(EditorFullFeatured),
     ifComponentSelector(asPreview),
-    withType('Rich Text')(),
+    withType('Text')(),
     withTitle('Full Rich Text'),
     withDesc('Adds a block of text for more complex HTML.\n'),
   ),
