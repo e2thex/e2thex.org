@@ -12,7 +12,7 @@
  * limitations under the License.
  */
 import { flow } from 'lodash';
-import { withMandatoryCategories } from '@bodiless/layouts';
+import { withMandatoryCategories, withTitle } from '@bodiless/layouts';
 import { FlowContainer } from '@bodiless/layouts-ui';
 import withToutVariations from './withToutVariations';
 import withRichTextVariations from './withRichTextVariations';
@@ -24,7 +24,8 @@ import { asFlowContainerWithMargins } from './token';
 import withAudioVariations from './withAudioVariations';
 import { replaceWith, withDesign } from '@bodiless/fclasses';
 import { withType } from './Categories';
-import Math from '../Tex';
+import Tex from '../Tex';
+import List from '../List'
 
 // Order of includes currently dictates order in Component Picker
 // thus recommend putting more frequently used components toward top for quicker access.
@@ -37,7 +38,8 @@ const FlowContainerDefault = flow(
   withYouTubeVariations,
   withAudioVariations,
   withDesign({
-    Tex: withType('Text')(replaceWith(Tex)),
+    Tex: flow(withTitle("Tex"), withType('Text')(replaceWith(Tex))),
+    List: flow(withTitle("List"), withType("Text")(replaceWith(List))),
   }),
   withMandatoryCategories(['Orientation', 'Type']),
 )(FlowContainer);

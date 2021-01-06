@@ -19,7 +19,7 @@
       "wrapperProps": {
         "className": "w-full lg:w-1/2"
       },
-      "type": "Math"
+      "type": "Tex"
     },
     {
       "uuid": "78e0ebc0-4d79-11eb-a341-e37ae99894c3",
@@ -33,7 +33,7 @@
       "wrapperProps": {
         "className": "w-full lg:w-1/2"
       },
-      "type": "Math"
+      "type": "Tex"
     },
     {
       "uuid": "61b6c620-4d76-11eb-a341-e37ae99894c3",
@@ -47,7 +47,7 @@
       "wrapperProps": {
         "className": "w-full lg:w-1/2"
       },
-      "type": "Math"
+      "type": "Tex"
     },
     {
       "uuid": "32bf3c60-4d78-11eb-a341-e37ae99894c3",
@@ -61,12 +61,26 @@
       "wrapperProps": {
         "className": "w-full lg:w-1/2"
       },
-      "type": "Math"
+      "type": "Tex"
     },
     {
       "uuid": "167b7d40-4d7b-11eb-a341-e37ae99894c3",
       "wrapperProps": {
         "className": "w-full lg:w-full"
+      },
+      "type": "EditorFullFeatured"
+    },
+    {
+      "uuid": "f275ffa0-4ea2-11eb-82c1-d59fdc06e696",
+      "wrapperProps": {
+        "className": "w-full"
+      },
+      "type": "List"
+    },
+    {
+      "uuid": "8d28b370-4ea4-11eb-b000-9dfe92c53113",
+      "wrapperProps": {
+        "className": "w-full"
       },
       "type": "EditorFullFeatured"
     }

@@ -34,12 +34,8 @@ const Test = props => {
   const { math } = props;
   return <Span>hi {math}</Span>
 }
-const withMathChild = props => Component => {
-  const { children } = props
-  return <Component math={children} />
-}
 type AsBlock   = { block: Boolean };
-const asBlock = <A extends object> (Component:ComponentType<A & AsBlock >) => (props:A) => <Component block {...props} />;
+const asBlock = <A extends { block:Boolean}> (Component:ComponentType<A>) => (props:A) => <Component {...props} block />;
 const Math = asBodilessComponent(options)()(asBlock(TeX));
 
 export default Math;

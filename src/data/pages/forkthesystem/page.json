@@ -1,25 +1,18 @@
 {
   "items": [
     {
-      "uuid": "6610ce50-4cae-11eb-ba04-cd77597579bc",
-      "wrapperProps": {
-        "className": "w-full"
-      },
-      "type": "Math"
-    },
-    {
-      "uuid": "f153d410-4cb0-11eb-a4dc-ff5212da8b71",
-      "wrapperProps": {
-        "className": "w-full"
-      },
-      "type": "Math"
-    },
-    {
-      "uuid": "d5a6be50-4d71-11eb-a4dc-ff5212da8b71",
+      "uuid": "f6790060-4e99-11eb-8e48-7b514934ec30",
       "wrapperProps": {
         "className": "w-full"
       },
       "type": "EditorFullFeatured"
+    },
+    {
+      "uuid": "d5a6be50-4d71-11eb-a4dc-ff5212da8b71",
+      "wrapperProps": {
+        "className": "w-full lg:w-1/2"
+      },
+      "type": "ToutVerticalNoBodyOverlayTitleInvertedTextNoCTAHeaderPrimary"
     }
   ]
 }

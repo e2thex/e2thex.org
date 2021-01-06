@@ -3,7 +3,7 @@
     "type": "H1",
     "children": [
       {
-        "text": "Learning to Embrace Uncertainty or \"You Know Nothing Erik Summerfield\""
+        "text": "Embracing Uncertainty or \"You Know Nothing Erik Summerfield\""
       }
     ]
   },
@@ -11,10 +11,39 @@
     "type": "paragraph",
     "children": [
       {
-        "text": "I was playing around with the idea of what we know and decide to do the math and in know time at all I reached a startling conclusion ... "
+        "text": "I was pondering how much I know and don't know and how they should affect how I make decisions. I have been a pusher of uncertainty (just see my blog post "
       },
       {
-        "text": "we understanding nothing",
+        "data": {
+          "openModal": true,
+          "slatenode": {
+            "href": "https://www.phase2technology.com/blog/estimate-pirate-use-old"
+          }
+        },
+        "type": "Link",
+        "children": [
+          {
+            "text": "Estimate like a Pirate use a B.O.A.T"
+          }
+        ]
+      },
+      {
+        "text": ") and thought maybe if I do the math it would be a good way to show people that they should be less certain then they are.  Well, I found that in fact, I was being "
+      },
+      {
+        "text": "too",
+        "Bold": true
+      },
+      {
+        "text": " certain, and actually, "
+      },
+      {
+        "text": "I know ",
+        "Italic": true
+      },
+      {
+        "text": "nothing",
+        "Bold": true,
         "Italic": true
       },
       {

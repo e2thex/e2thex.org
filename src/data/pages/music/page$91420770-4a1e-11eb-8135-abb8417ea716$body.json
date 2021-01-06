@@ -1,59 +1,29 @@
-{
-  "document": {
-    "object": "document",
+[
+  {
     "data": {},
-    "nodes": [
+    "type": "paragraph",
+    "children": [
       {
-        "object": "block",
-        "type": "paragraph",
-        "data": {},
-        "nodes": [
-          {
-            "object": "text",
-            "leaves": [
-              {
-                "object": "leaf",
-                "text": "Written by Elizabeth Mastery with additions:",
-                "marks": []
-              }
-            ]
-          }
-        ]
-      },
+        "text": "Written by Elizabeth Mastery with additions:"
+      }
+    ]
+  },
+  {
+    "data": {},
+    "type": "paragraph",
+    "children": [
       {
-        "object": "block",
-        "type": "paragraph",
-        "data": {},
-        "nodes": [
-          {
-            "object": "text",
-            "leaves": [
-              {
-                "object": "leaf",
-                "text": "Robin Summerfield: Slide Guitar",
-                "marks": []
-              }
-            ]
-          }
-        ]
-      },
+        "text": "Robin Summerfield: Slide Guitar"
+      }
+    ]
+  },
+  {
+    "data": {},
+    "type": "paragraph",
+    "children": [
       {
-        "object": "block",
-        "type": "paragraph",
-        "data": {},
-        "nodes": [
-          {
-            "object": "text",
-            "leaves": [
-              {
-                "object": "leaf",
-                "text": "Erik Summerfield: Glockenspiel",
-                "marks": []
-              }
-            ]
-          }
-        ]
+        "text": "Erik Summerfield: Glockenspiel"
       }
     ]
   }
-}
+]

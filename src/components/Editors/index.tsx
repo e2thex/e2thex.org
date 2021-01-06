@@ -40,7 +40,7 @@ import {
   asEditableLink,
   asTextColorPrimary,
 } from '../Elements.token';
-import Math from '../Math';
+import Math from '../Tex';
 import withEditor from './withEditor';
 
 const simpleDesign = {
