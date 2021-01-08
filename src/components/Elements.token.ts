@@ -86,7 +86,7 @@ const asBlockQuote = addClasses('block mx-4');
 /* Image component */
 const asImage = addClasses('');
 const asEditableImage = asBodilessImage;
-const asImageRounded = addClasses('rounded-lg');
+const asImageRounded = addClasses('rounded-t-lg');
 
 /* Link component */
 const asEditableLink = asBodilessLink;
@@ -95,7 +95,7 @@ const asEditableLink = asBodilessLink;
 const asEditable = asEditableCore;
 
 // Tout Components
-const asCta = flow(addClasses('text-center p-2 rounded'), asPrimaryColorBackground, asPrimaryColorBackgroundOnHover, asTextColorPrimary);
+const asCta = flow(addClasses('text-center p-2'), asPrimaryColorBackground, asPrimaryColorBackgroundOnHover, asTextColorPrimary);
 
 /* Utility Classes */
 const asDisabled = addClasses('pointer-events-none');

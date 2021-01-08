@@ -36,13 +36,15 @@ import {
   asTextColorSecondary,
   asPrimaryOverlay,
   asSecondaryOverlay,
+  asXMargin,
 } from '../Elements.token';
 
 const asToutHorizontal = flow(
   withDesign({
-    Title: addClasses(''),
-    Body: addClasses(''),
-    Link: addClasses(''),
+    Title: asXMargin,
+    Body: asXMargin,
+    Image: addClasses('rounded-l-lg'),
+    Link: addClasses('rounded-r'),
   }),
   asBToutHorizontal,
 );
@@ -50,6 +52,7 @@ const asToutVertical = flow(
   withDesign({
     Title: addClasses(''),
     Body: addClasses(''),
+    Link: addClasses('rounded-b')
   }),
   asBToutVertical,
 );
