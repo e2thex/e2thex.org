@@ -34,47 +34,7 @@
     "type": "H2",
     "children": [
       {
-        "text": "Time - Taking Uncertainty to 11"
-      }
-    ]
-  },
-  {
-    "type": "AlignCenter",
-    "children": [
-      {
-        "text": "So if our understanding is already 0 how can it get worse? Well enter hour good friend time which take everything we know and roll dice to make sure some of that stuff goes from know things to unknown things.  "
-      }
-    ]
-  },
-  {
-    "type": "paragraph",
-    "children": [
-      {
-        "text": ""
-      }
-    ]
-  },
-  {
-    "type": "paragraph",
-    "children": [
-      {
-        "text": "But if I know nothing how can I ever make a decision? "
-      }
-    ]
-  },
-  {
-    "type": "H2",
-    "children": [
-      {
-        "text": "Assume away Uncertainty"
-      }
-    ]
-  },
-  {
-    "type": "paragraph",
-    "children": [
-      {
-        "text": "Let's just attack the denominator, if I just assume somethings that will lower the \"Thing to Know\" small enough that I might be able to know something.  We often do this when we want to estimate something.  "
+        "text": "Time takes it to 11!"
       }
     ]
   }

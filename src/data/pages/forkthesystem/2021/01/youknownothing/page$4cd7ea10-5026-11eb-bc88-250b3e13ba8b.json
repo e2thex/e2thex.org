@@ -1,0 +1,3 @@
+{
+  "math": "\\forall  d  \\in \\text{Days},  \\forall x \\in \\text{Known Things}_{d-1}, \\\\ p = P(x \\in  X,  x \\not \\in  \\text{Known Things}_d ) \\land p > 0"
+}

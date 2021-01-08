@@ -50,21 +50,5 @@
         "text": "."
       }
     ]
-  },
-  {
-    "type": "paragraph",
-    "children": [
-      {
-        "text": ""
-      }
-    ]
-  },
-  {
-    "type": "H2",
-    "children": [
-      {
-        "text": "The Basic Math of Uncertainty "
-      }
-    ]
   }
 ]
