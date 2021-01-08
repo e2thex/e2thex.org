@@ -73,7 +73,7 @@
     "migrate:postbuild": "cross-env DEBUG=migration_tool migration_tool postbuild public",
     "migrate:full": "npm run migrate && npm run build && npm run migrate:postbuild && npm run serve",
     "search-index": "create-search-index",
-    "publish": "npm-run-all build:env-vars build:lib build:search",
+    "publish": "npm-run-all build:env-vars build:lib build:search publish:push",
     "publish:push": "gh-pages -d public -b prod"
   },
   "devDependencies": {
