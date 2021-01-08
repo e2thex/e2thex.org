@@ -10,9 +10,9 @@
     {
       "uuid": "d5a6be50-4d71-11eb-a4dc-ff5212da8b71",
       "wrapperProps": {
-        "className": "w-full lg:w-1/2"
+        "className": "w-full lg:w-full"
       },
-      "type": "ToutVerticalNoBodyOverlayTitleInvertedTextNoCTAHeaderPrimary"
+      "type": "ToutHorizontalHeaderPrimary"
     }
   ]
 }
