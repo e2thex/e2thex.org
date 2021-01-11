@@ -18,13 +18,14 @@ import {
   asBodilessLink,
   asEditable as asEditableCore,
 } from '@bodiless/components';
-import { asBodilessImage } from '@bodiless/components-ui';
+// import { asBodilessImage } from '@bodiless/components-ui';
 import {
   asResponsive21By9Embed,
   asResponsive16By9Embed,
   asResponsive4By3Embed,
   asResponsive1By1Embed,
 } from '@bodiless/organisms';
+import { asGatsbyImage as asBodilessImage } from './GastbyImage';
 import {
   asAlignCenter,
   asAlignRight,
