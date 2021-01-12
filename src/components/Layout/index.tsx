@@ -31,7 +31,7 @@ import { MegaMenuBreadcrumbs } from '../Breadcrumbs/MenuBreadcrumbs';
 const SiteHeader = asSiteHeader(Header);
 const SiteFooter = asSiteFooter(Footer);
 
-const Container = flow(
+const ContainerBase = flow(
   asPageContainer,
   asYMargin,
 )(Div);
@@ -39,7 +39,7 @@ const Container = flow(
 const BreadcrumbProvider = withBreadcrumbStore(Fragment);
 
 const BaseLayout = ({ children, components }) => {
-  const { Breadcrumbs } = components;
+  const { Breadcrumbs, Container } = components;
   return (
     <>
       <SeoHelmet />
@@ -65,6 +65,7 @@ const Layout = designable({
     // hide breadcrumbs on home page
     ifToggledOn(isHomePage)(replaceWith(React.Fragment)),
   )(MegaMenuBreadcrumbs),
+  Container: ContainerBase,
 })(BaseLayout);
 
 export default Layout;
