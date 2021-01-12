@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[15],{"TG/k":function(e,a,t){"use strict";t.r(a),t.d(a,"query",(function(){return i}));var n=t("q1tI"),r=t.n(n),c=t("Imzc"),l=t("gEU2"),s=t("VXBa"),o=t("0qex"),u=Object(l.withDesign)({Container:Object(l.addClasses)("max-w-text")})(s.a);a.default=function(e){return r.a.createElement(c.Page,e,"sofftball",r.a.createElement(u,null,"baseball",r.a.createElement(o.a,{nodeKey:"page"})))};var i="964730801"}}]);
+//# sourceMappingURL=component---src-templates-post-jsx-ed4ac7c574a54c8925e5.js.map
