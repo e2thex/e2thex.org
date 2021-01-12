@@ -6,15 +6,18 @@ import {
 } from '@bodiless/gatsby-theme-bodiless';
 import { asBodilessImage } from '@bodiless/components-ui';
 import { flowRight } from 'lodash';
-import { Img } from '@bodiless/fclasses';
-
-const asGatsbyImg = (preset: string) => props => flowRight(
+import { withNodeKey } from '@bodiless/core';
+// import { Img } from '@bodiless/fclasses';
+const asGatsbyImg = (preset: string) => (nodeKey) => flowRight(
+  withNodeKey(nodeKey),
   withGatsbyImageNode(preset),
-  asBodilessImage(props),
+  asBodilessImage(),
   withGatsbyImageLogger(preset),
   asBaseGatsbyImage,
 );
 const asGatsbyImage = asGatsbyImg(GatsbyImagePresets.FluidWithWebp);
-const GatsbyImg = asGatsbyImage()(Img);
-export default GatsbyImg;
+// const GatsbyImg = asGatsbyImage()(Img);
+/// export default GatsbyImg;
+
+export default asGatsbyImage;
 export { asGatsbyImage };
