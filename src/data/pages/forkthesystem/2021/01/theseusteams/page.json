@@ -1,0 +1,67 @@
+{
+  "items": [
+    {
+      "uuid": "2ca7dbc0-54ee-11eb-8242-6d792ebf96e5",
+      "wrapperProps": {
+        "className": "w-full lg:w-full"
+      },
+      "type": "EditorFullFeatured"
+    },
+    {
+      "uuid": "62538610-54ef-11eb-8242-6d792ebf96e5",
+      "wrapperProps": {
+        "className": "w-full lg:w-full"
+      },
+      "type": "Centered"
+    },
+    {
+      "uuid": "8332bef0-54ef-11eb-8242-6d792ebf96e5",
+      "wrapperProps": {
+        "className": "w-full lg:w-full"
+      },
+      "type": "EditorFullFeatured"
+    },
+    {
+      "uuid": "1522c0b0-54f2-11eb-a446-0f870cb21d67",
+      "wrapperProps": {
+        "className": "w-full"
+      },
+      "type": "List"
+    },
+    {
+      "uuid": "3d521360-54f2-11eb-a446-0f870cb21d67",
+      "wrapperProps": {
+        "className": "w-full"
+      },
+      "type": "EditorFullFeatured"
+    },
+    {
+      "uuid": "020b6760-54f3-11eb-a446-0f870cb21d67",
+      "wrapperProps": {
+        "className": "w-full"
+      },
+      "type": "Quote"
+    },
+    {
+      "uuid": "3ed6f6f0-54f8-11eb-b3af-e9f87b5fbc1a",
+      "wrapperProps": {
+        "className": "w-full"
+      },
+      "type": "EditorFullFeatured"
+    },
+    {
+      "uuid": "208a7d40-5500-11eb-ab02-7d87d2953381",
+      "wrapperProps": {
+        "className": "w-full"
+      },
+      "type": "Quote"
+    },
+    {
+      "uuid": "525bebe0-5507-11eb-ab02-7d87d2953381",
+      "wrapperProps": {
+        "className": "w-full"
+      },
+      "type": "EditorFullFeatured"
+    }
+  ]
+}

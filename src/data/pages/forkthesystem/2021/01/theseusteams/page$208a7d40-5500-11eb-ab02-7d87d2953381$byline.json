@@ -1,0 +1,27 @@
+[
+  {
+    "type": "paragraph",
+    "children": [
+      {
+        "text": ""
+      },
+      {
+        "data": {
+          "openModal": true,
+          "slatenode": {
+            "href": "https://critter.blog/"
+          }
+        },
+        "type": "Link",
+        "children": [
+          {
+            "text": "Critter"
+          }
+        ]
+      },
+      {
+        "text": ""
+      }
+    ]
+  }
+]

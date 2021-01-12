@@ -1,14 +1,11 @@
 import React, { ComponentType } from 'react';
-import { flow } from 'lodash';
 import 'katex/dist/katex.min.css';
 import TeX from '@matejmazur/react-katex';
 
 import {
   asBodilessComponent,
-  ifEditable, useMenuOptionUI, useNode,
+  useMenuOptionUI,
 } from '@bodiless/core';
-import { Div, startWith, replaceWith, Span } from '@bodiless/fclasses';
-import { asEditable } from '../Elements.token';
 
 const renderForm = () => {
   const { ComponentFormTitle, ComponentFormTextArea } = useMenuOptionUI();
@@ -28,14 +25,12 @@ const options = {
   wrapper: 'span',
   groupLabel: 'Tex',
   renderForm,
-  defaultData: { math:'5+2'},
-}
-const Test = props => {
-  const { math } = props;
-  return <Span>hi {math}</Span>
-}
-type AsBlock   = { block: Boolean };
-const asBlock = <A extends { block:Boolean}> (Component:ComponentType<A>) => (props:A) => <Component {...props} block />;
+  defaultData: { math: '5+2' },
+};
+type AsBlockProps<A> = A & { block:Boolean };
+const asBlock = <A extends object> (Component:ComponentType<A>) => (props:AsBlockProps<A>) => (
+  <Component {...props} block />
+);
 const Math = asBodilessComponent(options)()(asBlock(TeX));
 
 export default Math;

@@ -19,6 +19,8 @@ import {
   withFacet,
 } from '@bodiless/layouts';
 import {
+  addClasses,
+  Img,
   replaceWith,
   withDesign,
 } from '@bodiless/fclasses';
@@ -29,9 +31,10 @@ import {
   LandscapeImage,
   LandscapeLinkableImage,
 } from '../Image';
+import { asEditableImage } from '../Elements.token';
 
 const withImageFacet = withFacet('Image');
-
+const as50middle = addClasses('w-1/2 mx-auto');
 const images = {
   SquareImage: flow(
     replaceWith(SquareImage),
@@ -39,6 +42,13 @@ const images = {
     withImageFacet('Square')(),
     withTitle('Square Image'),
     withDesc('Adds a square image'),
+  ),
+  Centered: flow(
+    replaceWith(asEditableImage('image')(Img)),
+    withType('Image')(),
+    withImageFacet('Centered')(addClasses('xl:w-1/3 md:w-3/4 lg:w-1/2 mx-auto')),
+    withTitle('Centered Image'),
+    withDesc('A Image that is center to the page but does not take up the whole width'),
   ),
   LandscapeImage: flow(
     replaceWith(LandscapeImage),

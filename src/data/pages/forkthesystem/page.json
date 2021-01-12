@@ -10,9 +10,16 @@
     {
       "uuid": "d5a6be50-4d71-11eb-a4dc-ff5212da8b71",
       "wrapperProps": {
-        "className": "w-full lg:w-full"
+        "className": "w-full lg:w-1/2"
       },
-      "type": "ToutHorizontalHeaderPrimary"
+      "type": "ToutVerticalNoBodyOverlayTitleNormalText"
+    },
+    {
+      "uuid": "96ed68e0-5509-11eb-abf7-9143d9da18c7",
+      "wrapperProps": {
+        "className": "w-full lg:w-1/2"
+      },
+      "type": "ToutVerticalNoBodyOverlayTitleInvertedText"
     }
   ]
 }

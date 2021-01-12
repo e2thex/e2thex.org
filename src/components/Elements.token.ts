@@ -18,13 +18,14 @@ import {
   asBodilessLink,
   asEditable as asEditableCore,
 } from '@bodiless/components';
-import { asBodilessImage } from '@bodiless/components-ui';
+// import { asBodilessImage } from '@bodiless/components-ui';
 import {
   asResponsive21By9Embed,
   asResponsive16By9Embed,
   asResponsive4By3Embed,
   asResponsive1By1Embed,
 } from '@bodiless/organisms';
+import { asGatsbyImage as asBodilessImage } from './GastbyImage';
 import {
   asAlignCenter,
   asAlignRight,
@@ -35,7 +36,7 @@ import {
 
 /* Page Structure */
 const asBlockItem = addClasses('p-1 w-full');
-const asPageContainer = addClasses('container mx-auto');
+const asPageContainer = addClasses('container mx-auto max-w-text');
 const asXMargin = addClasses('mx-2');
 const asYMargin = addClasses('my-2');
 const asNegXMargin = addClasses('-mx-1');

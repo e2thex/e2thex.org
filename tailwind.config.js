@@ -335,7 +335,9 @@ module.exports = mergeWithBodilessConfigs({
     |
     */
 
-    // maxWidth: {},
+    maxWidth: {
+      text: '66ch',
+    },
 
     /*
     |---------------------------------------------------------------------------
