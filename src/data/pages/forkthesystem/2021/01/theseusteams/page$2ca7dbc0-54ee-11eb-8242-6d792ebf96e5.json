@@ -1,0 +1,35 @@
+[
+  {
+    "type": "H1",
+    "children": [
+      {
+        "text": "Touching Jelled Teams"
+      }
+    ]
+  },
+  {
+    "type": "paragraph",
+    "children": [
+      {
+        "text": "Teams need to "
+      },
+      {
+        "data": {
+          "openModal": true,
+          "slatenode": {
+            "href": "https://critter.blog/2021/01/11/do-teams-jell-or-gel/"
+          }
+        },
+        "type": "Link",
+        "children": [
+          {
+            "text": "jell"
+          }
+        ]
+      },
+      {
+        "text": ".  So let us skip the hard part and say you have a team that has jelled. Congratulations that is really hard to do and you have succeeded!  You must be amazing. "
+      }
+    ]
+  }
+]
