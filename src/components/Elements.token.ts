@@ -36,7 +36,7 @@ import {
 
 /* Page Structure */
 const asBlockItem = addClasses('p-1 w-full');
-const asPageContainer = addClasses('container mx-auto');
+const asPageContainer = addClasses('container mx-auto max-w-text');
 const asXMargin = addClasses('mx-2');
 const asYMargin = addClasses('my-2');
 const asNegXMargin = addClasses('-mx-1');
