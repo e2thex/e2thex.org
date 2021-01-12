@@ -24,9 +24,7 @@ const Layout = withDesign({
 })(LayoutDefault);
 export default props => (
   <Page {...props}>
-    sofftball
     <Layout>
-      baseball
       <FlowContainerDefault nodeKey="page" />
     </Layout>
   </Page>
