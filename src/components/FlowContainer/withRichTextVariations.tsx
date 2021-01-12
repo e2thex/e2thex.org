@@ -22,6 +22,7 @@ import {
   varyDesign,
   replaceWith,
   withDesign,
+  addClasses,
 } from '@bodiless/fclasses';
 import { asPreview } from '@bodiless/richtext';
 
@@ -29,9 +30,22 @@ import {
   EditorBasic,
   EditorFullFeatured,
   EditorSimple,
+  withEditorFullFeatured,
 } from '../Editors';
 import { withType } from './Categories';
+import { QuoteClean } from '../Quote';
 
+const Quote = withDesign({
+  Wrapper: addClasses('flex flex-wrap flex-col m:w-3/4 lg:w-2/3 xl:w-1/2 mx-auto'),
+  QuoteWrapper: addClasses('flex text-xl'),
+  Starting: addClasses('text-6xl -mt-3'),
+  Quote: withEditorFullFeatured('quote', 'Text of Quote'),
+  Byline: flow(
+    addClasses('atext-right self-end mr-2'),
+    withEditorFullFeatured('byline', 'Text of Byline'),
+  ),
+  Ending: addClasses('self-end text-6xl -mb-3'),
+})(QuoteClean);
 const richTextVariation = {
   /*
   EditorSimple: flow(
@@ -55,6 +69,12 @@ const richTextVariation = {
     withType('Text')(),
     withTitle('Full Rich Text'),
     withDesc('Adds a block of text for more complex HTML.\n'),
+  ),
+  Quote: flow(
+    replaceWith(Quote),
+    withType('Text')(),
+    withTitle('Quote'),
+    withDesc('Adds a quote\n'),
   ),
 };
 

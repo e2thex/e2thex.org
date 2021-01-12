@@ -7,8 +7,10 @@ import {
 import { asBodilessImage } from '@bodiless/components-ui';
 import { flowRight } from 'lodash';
 import { withNodeKey } from '@bodiless/core';
+import { stylable } from '@bodiless/fclasses';
 // import { Img } from '@bodiless/fclasses';
 const asGatsbyImg = (preset: string) => (nodeKey) => flowRight(
+  stylable,
   withNodeKey(nodeKey),
   withGatsbyImageNode(preset),
   asBodilessImage(),
