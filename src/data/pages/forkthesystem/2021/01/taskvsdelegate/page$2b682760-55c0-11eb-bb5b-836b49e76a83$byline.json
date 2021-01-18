@@ -1,0 +1,27 @@
+[
+  {
+    "type": "paragraph",
+    "children": [
+      {
+        "text": ""
+      },
+      {
+        "data": {
+          "openModal": true,
+          "slatenode": {
+            "href": "https://www.lexico.com/en/definition/delegate"
+          }
+        },
+        "type": "Link",
+        "children": [
+          {
+            "text": "Oxford English Dictionary"
+          }
+        ]
+      },
+      {
+        "text": ""
+      }
+    ]
+  }
+]

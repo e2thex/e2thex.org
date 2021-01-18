@@ -1,0 +1,25 @@
+[
+  {
+    "type": "paragraph",
+    "children": [
+      {
+        "text": "Assign ",
+        "Bold": true
+      },
+      {
+        "text": "(verb)",
+        "Italic": true
+      },
+      {
+        "text": ":"
+      },
+      {
+        "text": " ",
+        "Italic": true
+      },
+      {
+        "text": "Allocate"
+      }
+    ]
+  }
+]
