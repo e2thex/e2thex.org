@@ -57,6 +57,20 @@
       "type": "Quote"
     },
     {
+      "uuid": "92b46f30-59a0-11eb-a9b9-e5f8c4af231c",
+      "wrapperProps": {
+        "className": "w-full"
+      },
+      "type": "EditorFullFeatured"
+    },
+    {
+      "uuid": "a7114b60-59a0-11eb-a9b9-e5f8c4af231c",
+      "wrapperProps": {
+        "className": "w-full"
+      },
+      "type": "Quote"
+    },
+    {
       "uuid": "be619f80-55e6-11eb-9ff2-ad2297fb218a",
       "wrapperProps": {
         "className": "w-full"

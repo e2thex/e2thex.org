@@ -1,0 +1,20 @@
+[
+  {
+    "type": "paragraph",
+    "children": [
+      {
+        "text": "The team is expected to possess all of the necessary competencies, whether technical (programming, designing, testing) or business (domain knowledge, ",
+        "Italic": true
+      },
+      {
+        "text": "decision making ability",
+        "Italic": true,
+        "Bold": true
+      },
+      {
+        "text": ").",
+        "Italic": true
+      }
+    ]
+  }
+]
