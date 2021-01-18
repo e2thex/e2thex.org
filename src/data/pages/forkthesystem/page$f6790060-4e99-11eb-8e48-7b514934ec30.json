@@ -3,7 +3,49 @@
     "type": "H1",
     "children": [
       {
-        "text": "Fork The System Blog"
+        "text": "Fork The System Collection"
+      }
+    ]
+  },
+  {
+    "type": "paragraph",
+    "children": [
+      {
+        "text": "Here lies a collection of essays that I have written related to how I work with people.  Many of these have been edited by "
+      },
+      {
+        "data": {
+          "openModal": true,
+          "slatenode": {
+            "href": "https://critter.blog/"
+          }
+        },
+        "type": "Link",
+        "children": [
+          {
+            "text": "Mike Crittenden"
+          }
+        ]
+      },
+      {
+        "text": ""
+      },
+      {
+        "data": {
+          "openModal": true,
+          "slatenode": {
+            "href": "https://critter.blog/"
+          }
+        },
+        "type": "Link",
+        "children": [
+          {
+            "text": ""
+          }
+        ]
+      },
+      {
+        "text": "."
       }
     ]
   }
