@@ -78,7 +78,7 @@ const asStrikeThrough = addClasses('');
 const asSuperScript = addClasses('');
 
 const asHeader1 = flow(addClasses('text-3xl'), asTextColorSecondary);
-const asHeader2 = addClasses('text-2xl bg-gradient-to-t from-gray-100 p-1 via-transparent border-b font-bold');
+const asHeader2 = flow(addClasses('text-2xl my-4 bg-gradient-to-t from-gray-100 p-1 via-transparent border-b font-bold'));
 const asHeader3 = addClasses('text-xl');
 
 /* BlockQuote */
