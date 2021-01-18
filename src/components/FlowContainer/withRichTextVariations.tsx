@@ -36,7 +36,7 @@ import { withType } from './Categories';
 import { QuoteClean } from '../Quote';
 
 const Quote = withDesign({
-  Wrapper: addClasses('flex flex-wrap flex-col m:w-3/4 mx-auto'),
+  Wrapper: addClasses('flex justify-between h-full flex-wrap flex-col m:w-3/4 mx-auto'),
   QuoteWrapper: addClasses('flex text-xl'),
   Starting: addClasses('text-6xl -mt-3'),
   Quote: withEditorFullFeatured('quote', 'Text of Quote'),
