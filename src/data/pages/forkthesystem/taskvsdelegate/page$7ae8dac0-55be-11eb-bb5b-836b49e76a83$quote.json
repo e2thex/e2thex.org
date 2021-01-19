@@ -1,0 +1,21 @@
+[
+  {
+    "type": "paragraph",
+    "children": [
+      {
+        "text": "Task",
+        "Bold": true
+      },
+      {
+        "text": " ("
+      },
+      {
+        "text": "verb)",
+        "Italic": true
+      },
+      {
+        "text": ": Assign a piece of work to."
+      }
+    ]
+  }
+]

@@ -36,7 +36,7 @@ import {
 
 /* Page Structure */
 const asBlockItem = addClasses('p-1 w-full');
-const asPageContainer = addClasses('container mx-auto max-w-text');
+const asPageContainer = addClasses('container mx-auto');
 const asXMargin = addClasses('mx-2');
 const asYMargin = addClasses('my-2');
 const asNegXMargin = addClasses('-mx-1');
@@ -78,7 +78,7 @@ const asStrikeThrough = addClasses('');
 const asSuperScript = addClasses('');
 
 const asHeader1 = flow(addClasses('text-3xl'), asTextColorSecondary);
-const asHeader2 = addClasses('text-2xl bg-gradient-to-t from-gray-100 p-1 via-transparent border-b font-bold');
+const asHeader2 = flow(addClasses('text-2xl my-4 bg-gradient-to-t from-gray-100 p-1 via-transparent border-b font-bold'));
 const asHeader3 = addClasses('text-xl');
 
 /* BlockQuote */

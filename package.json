@@ -38,6 +38,7 @@
     "gatsby-plugin-canonical-urls": "^2.1.18",
     "gatsby-plugin-google-tagmanager": "^2.1.4",
     "gatsby-plugin-sitemap": "^2.2.24",
+    "informed": "^3.13.1",
     "katex": "^0.12.0",
     "lodash": "^4.17.19",
     "ora": "^4.0.2",

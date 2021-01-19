@@ -1,0 +1,27 @@
+[
+  {
+    "type": "paragraph",
+    "children": [
+      {
+        "text": ""
+      },
+      {
+        "data": {
+          "openModal": true,
+          "slatenode": {
+            "href": "https://www.agilealliance.org/glossary/team/"
+          }
+        },
+        "type": "Link",
+        "children": [
+          {
+            "text": "Agile Alliance"
+          }
+        ]
+      },
+      {
+        "text": ""
+      }
+    ]
+  }
+]
