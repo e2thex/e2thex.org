@@ -1,0 +1,27 @@
+[
+  {
+    "type": "paragraph",
+    "children": [
+      {
+        "text": ""
+      },
+      {
+        "data": {
+          "openModal": true,
+          "slatenode": {
+            "href": "https://en.wikipedia.org/wiki/Shuhari"
+          }
+        },
+        "type": "Link",
+        "children": [
+          {
+            "text": "Wikipedia"
+          }
+        ]
+      },
+      {
+        "text": ""
+      }
+    ]
+  }
+]

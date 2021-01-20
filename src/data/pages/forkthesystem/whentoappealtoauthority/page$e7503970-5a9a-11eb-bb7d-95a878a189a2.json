@@ -1,0 +1,27 @@
+[
+  {
+    "type": "paragraph",
+    "children": [
+      {
+        "text": "When I see this craft it makes me think of the concept of "
+      },
+      {
+        "data": {
+          "openModal": true,
+          "slatenode": {
+            "href": "https://en.wikipedia.org/wiki/Shuhari"
+          }
+        },
+        "type": "Link",
+        "children": [
+          {
+            "text": "Shuhari"
+          }
+        ]
+      },
+      {
+        "text": "."
+      }
+    ]
+  }
+]
