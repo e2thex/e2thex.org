@@ -12,14 +12,14 @@
       "wrapperProps": {
         "className": "w-full lg:w-1/2"
       },
-      "type": "ToutVerticalOverlayTitleNormalTextHeaderPrimary"
+      "type": "ToutHorizontalHeaderPrimary"
     },
     {
       "uuid": "f26c7c70-4941-11eb-abd2-114680d64047",
       "wrapperProps": {
         "className": "w-full lg:w-1/2"
       },
-      "type": "ToutVerticalNoBodyOverlayTitleNormalTextHeaderPrimary"
+      "type": "ToutHorizontalHeaderPrimary"
     }
   ]
 }

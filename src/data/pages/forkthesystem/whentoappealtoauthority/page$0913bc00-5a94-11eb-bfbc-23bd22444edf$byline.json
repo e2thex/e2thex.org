@@ -1,0 +1,27 @@
+[
+  {
+    "type": "paragraph",
+    "children": [
+      {
+        "text": ""
+      },
+      {
+        "data": {
+          "openModal": true,
+          "slatenode": {
+            "href": "https://www.scrumguides.org/scrum-guide.html"
+          }
+        },
+        "type": "Link",
+        "children": [
+          {
+            "text": "Scrum Guild"
+          }
+        ]
+      },
+      {
+        "text": ""
+      }
+    ]
+  }
+]
