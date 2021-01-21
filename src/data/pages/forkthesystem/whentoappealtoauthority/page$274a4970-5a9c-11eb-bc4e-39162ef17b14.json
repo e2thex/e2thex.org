@@ -3,7 +3,14 @@
     "type": "paragraph",
     "children": [
       {
-        "text": "During the first part (Shu) of the curve, your team has not generated enough experience so you should do what others before you did (Do Scrum). "
+        "text": "During the first part (Shu) of the curve, our team has not generated enough experience so we should do what others before you did (Do Scrum).  And we should allow the argument "
+      },
+      {
+        "text": "that is not scrum ",
+        "Italic": true
+      },
+      {
+        "text": "to carry the day."
       }
     ]
   },
@@ -19,7 +26,7 @@
     "type": "paragraph",
     "children": [
       {
-        "text": "During the middle part (Ha) you should start to challenge what others do but you should have a reason why you are challenging it."
+        "text": "During the middle part (Ha), we should start to challenge what others do (Scrum) but the burden of proof is us to why we are special."
       }
     ]
   },
@@ -35,7 +42,7 @@
     "type": "paragraph",
     "children": [
       {
-        "text": "During the last part (Ri) now you must stand alone. Scrum is no longer an acceptable appeal you must defend the reasoning behind why you should stay with scrum."
+        "text": "During the last part (Ri) we must stand on our own. Scrum is no longer an acceptable appeal we must defend the reasoning behind why we should stay with Scrum just as much as why we might leave it."
       }
     ]
   }
