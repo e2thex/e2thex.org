@@ -1,9 +1,34 @@
 [
   {
+    "type": "H2",
+    "children": [
+      {
+        "text": "Wrapping It Up"
+      }
+    ]
+  },
+  {
     "type": "paragraph",
     "children": [
       {
-        "text": "\n\n\nAs the project goes you gain more and more experience and will start to understand where your team might differ from the aggregate teamlWhen we start a project we do not have any experience yet with our team or our project. So falling back on the experience of other teams and other projects seems like a very good idea."
+        "text": "In the end, it comes down to "
+      },
+      {
+        "data": {
+          "openModal": true,
+          "slatenode": {
+            "href": "/forkthesystem/2021/01/youknownothing/"
+          }
+        },
+        "type": "Link",
+        "children": [
+          {
+            "text": "uncertainty"
+          }
+        ]
+      },
+      {
+        "text": " When we do not know about our project and team and the context we find ourselves in,  there is a higher chance that a successful generic solution will be better than a specific solution.  But as we learn more about our project, our team, and the context in which we are working, the more likely it is that we can do better than the generic solution."
       }
     ]
   }

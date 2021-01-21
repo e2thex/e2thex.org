@@ -36,6 +36,13 @@
       "type": "EditorFullFeatured"
     },
     {
+      "uuid": "77b1a970-5bf1-11eb-bb56-0b22bfd0d14c",
+      "wrapperProps": {
+        "className": "w-full"
+      },
+      "type": "List"
+    },
+    {
       "uuid": "ffbaf990-5a96-11eb-865b-ddeb5b2695e2",
       "wrapperProps": {
         "className": "w-full"

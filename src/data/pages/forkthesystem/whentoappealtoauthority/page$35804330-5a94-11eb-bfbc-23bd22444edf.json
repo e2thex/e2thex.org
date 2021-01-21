@@ -19,7 +19,7 @@
     "type": "H2",
     "children": [
       {
-        "text": "What Scrum things vs what I think"
+        "text": "What Scrum Things vs What I Think"
       }
     ]
   },
@@ -51,7 +51,23 @@
     "type": "paragraph",
     "children": [
       {
-        "text": "As the project evolves we start to learn more about our team this has two effects, it lowers the value of what we can get from the aggregated generic team and increase the value of your owns team's experience."
+        "text": "As the project evolves we start to learn more about our team this has two effects, "
+      }
+    ]
+  },
+  {
+    "type": "paragraph",
+    "children": [
+      {
+        "text": ""
+      }
+    ]
+  },
+  {
+    "type": "paragraph",
+    "children": [
+      {
+        "text": ""
       }
     ]
   },
