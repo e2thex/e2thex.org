@@ -12,7 +12,7 @@
  * limitations under the License.
  */
 import { flow } from 'lodash';
-import { withMandatoryCategories, withTitle } from '@bodiless/layouts';
+import { withFacet, withMandatoryCategories, withTitle } from '@bodiless/layouts';
 import { FlowContainer } from '@bodiless/layouts-ui';
 import withToutVariations from './withToutVariations';
 import withRichTextVariations from './withRichTextVariations';
@@ -26,7 +26,13 @@ import { replaceWith, withDesign } from '@bodiless/fclasses';
 import { withType } from './Categories';
 import Tex from '../Tex';
 import List from '../List'
+import { RACI1 } from '../Tables';
+import ScrumGuild from '../ScrumGuild';
 
+
+const withTables = withDesign({
+  RACI1: flow(withTitle('RACI1'), withType('Custom')(replaceWith(RACI1))),
+});
 // Order of includes currently dictates order in Component Picker
 // thus recommend putting more frequently used components toward top for quicker access.
 const FlowContainerDefault = flow(
@@ -37,6 +43,7 @@ const FlowContainerDefault = flow(
   withIframeVariations,
   withYouTubeVariations,
   withAudioVariations,
+  withTables,
   withDesign({
     Tex: flow(withTitle("Tex"), withType('Text')(replaceWith(Tex))),
     List: flow(withTitle("List"), withType("Text")(replaceWith(List))),

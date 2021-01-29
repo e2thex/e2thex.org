@@ -302,7 +302,9 @@ module.exports = mergeWithBodilessConfigs({
     |
     */
 
-    // minWidth: {},
+    minWidth: {
+      1: '1em',
+    },
 
     /*
     |---------------------------------------------------------------------------
@@ -318,7 +320,7 @@ module.exports = mergeWithBodilessConfigs({
     |
     */
 
-    // minHeight: {},
+    // minHeight: {
 
     /*
     |---------------------------------------------------------------------------
@@ -353,7 +355,9 @@ module.exports = mergeWithBodilessConfigs({
     |
     */
 
-    // maxHeight: {},
+    maxHeight: {
+      v: '100vh',
+    },
 
     /*
     |---------------------------------------------------------------------------

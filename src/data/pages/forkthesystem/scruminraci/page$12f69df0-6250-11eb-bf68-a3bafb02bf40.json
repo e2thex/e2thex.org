@@ -1,18 +1,21 @@
 [
   {
-    "type": "AlignCenter",
+    "type": "paragraph",
     "children": [
       {
-        "text": ""
+        "text": "Test a "
       },
       {
         "data": {
-          "openModal": true
+          "openModal": true,
+          "slatenode": {
+            "href": "#test"
+          }
         },
         "type": "Link",
         "children": [
           {
-            "text": "A"
+            "text": "link"
           }
         ]
       },

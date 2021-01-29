@@ -143,7 +143,11 @@
     "type": "paragraph",
     "children": [
       {
-        "text": "Scrum is founded on empiricism and lean thinking. Empiricism asserts that knowledge comes from experience and making decisions based on what is observed. Lean thinking reduces waste and focuses on the essentials."
+        "text": "Scrum",
+        "Highlight": true
+      },
+      {
+        "text": " is founded on empiricism and lean thinking. Empiricism asserts that knowledge comes from experience and making decisions based on what is observed. Lean thinking reduces waste and focuses on the essentials."
       }
     ]
   },
