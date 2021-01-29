@@ -1,0 +1,11 @@
+{
+  "items": [
+    {
+      "uuid": "7bd14d10-6242-11eb-bf9b-09732b17adfd",
+      "wrapperProps": {
+        "className": "w-full"
+      },
+      "type": "RACI1"
+    }
+  ]
+}
