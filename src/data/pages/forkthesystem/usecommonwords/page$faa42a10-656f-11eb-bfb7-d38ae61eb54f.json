@@ -20,14 +20,14 @@
         ]
       },
       {
-        "text": " proves a list of the most commonly"
+        "text": " provides a list of the most commonly"
       },
       {
         "text": "1",
         "SuperScript": true
       },
       {
-        "text": " used words I am using that as a proxy for cheap words and then having all other ones as expensive."
+        "text": " used words. I'm using that as a proxy for cheap words, meaning a word is expensive if it's not in the list."
       }
     ]
   },
@@ -43,14 +43,11 @@
     "type": "paragraph",
     "children": [
       {
-        "text": "If you want to see how expensive your writing is and you have an RSS feed enter it below.  We will compare it to some other feeds out there ("
+        "text": "If you want to see how expensive your writing is and you have an RSS feed, enter it below. We will compare it to some other feeds. "
       },
       {
-        "text": "you can do multiple feeds one per line",
+        "text": "You can do multiple feeds one per line.",
         "Italic": true
-      },
-      {
-        "text": ")"
       }
     ]
   }
