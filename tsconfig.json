@@ -22,6 +22,7 @@
     "declarationMap": true,
     "allowJs": true,
     "strictNullChecks": true,
+    "resolveJsonModule": true,
     "noEmit": true
   },
   "include": [

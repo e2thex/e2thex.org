@@ -1,0 +1,57 @@
+[
+  {
+    "type": "paragraph",
+    "children": [
+      {
+        "text": "The site "
+      },
+      {
+        "data": {
+          "openModal": true,
+          "slatenode": {
+            "href": "/www.wordfrequency.info"
+          }
+        },
+        "type": "Link",
+        "children": [
+          {
+            "text": "www.wordfrequency.info"
+          }
+        ]
+      },
+      {
+        "text": " proves a list of the most commonly"
+      },
+      {
+        "text": "1",
+        "SuperScript": true
+      },
+      {
+        "text": " used words I am using that as a proxy for cheap words and then having all other ones as expensive."
+      }
+    ]
+  },
+  {
+    "type": "paragraph",
+    "children": [
+      {
+        "text": ""
+      }
+    ]
+  },
+  {
+    "type": "paragraph",
+    "children": [
+      {
+        "text": "If you want to see how expensive your writing is and you have an RSS feed enter it below.  We will compare it to some other feeds out there ("
+      },
+      {
+        "text": "you can do multiple feeds one per line",
+        "Italic": true
+      },
+      {
+        "text": ")"
+      }
+    ]
+  }
+]

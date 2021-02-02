@@ -46,6 +46,7 @@
     "react-dom": "^16.11.0",
     "react-h5-audio-player": "^3.5.0",
     "react-helmet": "^5.2.0",
+    "rss-parser": "^3.10.0",
     "tailwindcss": "^1.0"
   },
   "files": [

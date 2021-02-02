@@ -1,0 +1,39 @@
+{
+  "items": [
+    {
+      "uuid": "e6aa3290-6568-11eb-afc2-734f635f9f15",
+      "wrapperProps": {
+        "className": "w-full"
+      },
+      "type": "EditorFullFeatured"
+    },
+    {
+      "uuid": "db37bb10-656f-11eb-bfb7-d38ae61eb54f",
+      "wrapperProps": {
+        "className": "w-full"
+      },
+      "type": "Quote"
+    },
+    {
+      "uuid": "faa42a10-656f-11eb-bfb7-d38ae61eb54f",
+      "wrapperProps": {
+        "className": "w-full lg:w-full"
+      },
+      "type": "EditorFullFeatured"
+    },
+    {
+      "uuid": "96f85050-655a-11eb-9fbf-a55e7d28989a",
+      "wrapperProps": {
+        "className": "w-full"
+      },
+      "type": "CommonWords"
+    },
+    {
+      "uuid": "a9249970-6571-11eb-9fc2-e5aeea11b7cd",
+      "wrapperProps": {
+        "className": "w-full"
+      },
+      "type": "EditorFullFeatured"
+    }
+  ]
+}

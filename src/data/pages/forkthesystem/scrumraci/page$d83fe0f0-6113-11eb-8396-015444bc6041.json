@@ -1,0 +1,43 @@
+[
+  {
+    "type": "paragraph",
+    "children": [
+      {
+        "text": "So our exercise here was if we use the "
+      },
+      {
+        "data": {
+          "openModal": true,
+          "slatenode": {
+            "href": "https://www.scrumguides.org/scrum-guide.html"
+          }
+        },
+        "type": "Link",
+        "children": [
+          {
+            "text": "Scrum Guild"
+          }
+        ]
+      },
+      {
+        "text": " can we filling a RACI matrix."
+      }
+    ]
+  },
+  {
+    "type": "H2",
+    "children": [
+      {
+        "text": "Step One Pull Directly from the Scrum Guild."
+      }
+    ]
+  },
+  {
+    "type": "paragraph",
+    "children": [
+      {
+        "text": "First of all we need the players"
+      }
+    ]
+  }
+]

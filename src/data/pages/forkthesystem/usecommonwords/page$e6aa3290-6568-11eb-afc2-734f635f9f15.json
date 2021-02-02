@@ -1,0 +1,43 @@
+[
+  {
+    "type": "H1",
+    "children": [
+      {
+        "text": "How Expensive is Your Language"
+      }
+    ]
+  },
+  {
+    "type": "H1",
+    "children": [
+      {
+        "text": ""
+      }
+    ]
+  },
+  {
+    "type": "paragraph",
+    "children": [
+      {
+        "text": "I was inspired by the blog post "
+      },
+      {
+        "data": {
+          "openModal": true,
+          "slatenode": {
+            "href": "https://critter.blog/2021/01/29/use-the-smallest-word-that-does-the-job/"
+          }
+        },
+        "type": "Link",
+        "children": [
+          {
+            "text": "Use the smallest word that does the job"
+          }
+        ]
+      },
+      {
+        "text": ", to explore to calculate how expensive one's writing is.  After some discussion with the author we agreed on a definition of expensive:"
+      }
+    ]
+  }
+]

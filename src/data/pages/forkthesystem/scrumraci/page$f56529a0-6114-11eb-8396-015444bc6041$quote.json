@@ -1,0 +1,42 @@
+[
+  {
+    "type": "paragraph",
+    "children": [
+      {
+        "text": "the Developers are always accountable for:"
+      }
+    ]
+  },
+  {
+    "type": "paragraph",
+    "children": [
+      {
+        "text": "- Creating a plan for the Sprint, the Sprint Backlog;"
+      }
+    ]
+  },
+  {
+    "type": "paragraph",
+    "children": [
+      {
+        "text": "- Instilling quality by adhering to a Definition of Done;"
+      }
+    ]
+  },
+  {
+    "type": "paragraph",
+    "children": [
+      {
+        "text": "- Adapting their plan each day toward the Sprint Goal; and,"
+      }
+    ]
+  },
+  {
+    "type": "paragraph",
+    "children": [
+      {
+        "text": "- Holding each other accountable as professionals."
+      }
+    ]
+  }
+]

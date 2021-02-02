@@ -1,0 +1,39 @@
+{
+  "items": [
+    {
+      "uuid": "502a0100-5f29-11eb-9df8-a53bb9d4a0c6",
+      "wrapperProps": {
+        "className": "w-full"
+      },
+      "type": "EditorFullFeatured"
+    },
+    {
+      "uuid": "53a11470-5f2b-11eb-809f-2bd09cef3ba1",
+      "wrapperProps": {
+        "className": "w-full"
+      },
+      "type": "LandscapeImage"
+    },
+    {
+      "uuid": "5cadf970-5f2b-11eb-809f-2bd09cef3ba1",
+      "wrapperProps": {
+        "className": "w-full"
+      },
+      "type": "EditorFullFeatured"
+    },
+    {
+      "uuid": "043e3ec0-5f2c-11eb-809f-2bd09cef3ba1",
+      "wrapperProps": {
+        "className": "w-full lg:w-1/2"
+      },
+      "type": "Quote"
+    },
+    {
+      "uuid": "0a50cf80-5f2c-11eb-809f-2bd09cef3ba1",
+      "wrapperProps": {
+        "className": "w-full lg:w-1/2"
+      },
+      "type": "Quote"
+    }
+  ]
+}

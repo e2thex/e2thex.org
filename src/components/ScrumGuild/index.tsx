@@ -6,7 +6,8 @@ import React from 'react';
 const HighlightSpan = (p) => (<Span className="bg-yellow-500" {...p} />)
 const HighlightDisplay = (props) => {
   const { hid, children, ...rest } = props;
-  const Wrapper = (window.location.hash === `#${hid}`)
+  // const Wrapper = (window.location.hash === `#${hid}`)
+  const Wrapper = false
     ? HighlightSpan
     : Span;
   return (

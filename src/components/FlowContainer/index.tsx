@@ -28,10 +28,12 @@ import Tex from '../Tex';
 import List from '../List'
 import { RACI1 } from '../Tables';
 import ScrumGuild from '../ScrumGuild';
+import CommonWords from '../CommonWords';
 
 
 const withTables = withDesign({
   RACI1: flow(withTitle('RACI1'), withType('Custom')(replaceWith(RACI1))),
+  CommonWords: flow(withTitle('CommonWords'), withType('Custom')(replaceWith(CommonWords))),
 });
 // Order of includes currently dictates order in Component Picker
 // thus recommend putting more frequently used components toward top for quicker access.
