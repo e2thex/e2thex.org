@@ -42,6 +42,7 @@ import imgFacebookRnd from './images/facebookimg.png';
 import imgTwitter from './images/twitter.png';
 import imgTwitterRnd from './images/twitterimg.png';
 import imgEmail from './images/email.png';
+import imgLinkedin from './images/LI-In-Bug.png';
 import imgEmailRnd from './images/emailimg.png';
 
 type ProviderProps = {
@@ -197,6 +198,25 @@ const twitterRound: SocialShareProvider = {
     onclick={twitterShare}
   />,
 };
+/**
+ * Linkedin social share provider.
+ */
+const linkedinShare = () => {
+  const { url } = pageResources();
+  const linkedinSrc = `https://www.linkedin.com/shareArticle?mini=true&url=${encodeURIComponent(url)}`;
+  popupOpen({
+    url: linkedinSrc,
+    name: 'share',
+  });
+};
+const linkedin: SocialShareProvider = {
+  id: 'linkedin',
+  element: <Provider
+    name="LinkedIn"
+    icon={imgLinkedin}
+    onclick={linkedinShare}
+  />,
+};
 
 /**
  * Email share provider.
@@ -226,6 +246,7 @@ const emailRound: SocialShareProvider = {
 const providers: SocialShareProvider[] = [
   facebook,
   twitter,
+  linkedin,
   email,
 ];
 const providersCustomized: SocialShareProvider[] = [

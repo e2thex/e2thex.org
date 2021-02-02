@@ -1,0 +1,20 @@
+[
+  {
+    "type": "paragraph",
+    "children": [
+      {
+        "text": "The Scrum Master is accountable for establishing Scrum as defined in the Scrum Guide. They do this by helping everyone understand Scrum theory and practice, both within the Scrum Team and the organization.",
+        "Italic": true
+      }
+    ]
+  },
+  {
+    "type": "paragraph",
+    "children": [
+      {
+        "text": "The Scrum Master is accountable for the Scrum Team’s effectiveness. They do this by enabling the Scrum Team to improve its practices, within the Scrum framework.",
+        "Italic": true
+      }
+    ]
+  }
+]

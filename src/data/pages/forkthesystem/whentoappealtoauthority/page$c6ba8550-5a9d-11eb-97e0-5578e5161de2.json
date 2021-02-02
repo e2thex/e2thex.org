@@ -28,7 +28,23 @@
         ]
       },
       {
-        "text": ". When we do not know about our project and team and the context we find ourselves in, there is a higher chance that a successful generic solution will be better than a specific solution. But as we learn more about our project, our team, and the context in which we are working, the more likely it is that we can do better than the generic solution."
+        "text": " When we do not know about our project and team and the context we find ourselves in,  there is a higher chance that a well-conceived generic solution will be better than any specific solution we could dream up.  "
+      }
+    ]
+  },
+  {
+    "type": "paragraph",
+    "children": [
+      {
+        "text": ""
+      }
+    ]
+  },
+  {
+    "type": "paragraph",
+    "children": [
+      {
+        "text": "But as we learn more about our project, our team, and the context in which we are working, the more likely it is that we can do better than the generic solution."
       }
     ]
   }

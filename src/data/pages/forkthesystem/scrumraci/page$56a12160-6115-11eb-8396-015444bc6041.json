@@ -1,0 +1,27 @@
+[
+  {
+    "type": "paragraph",
+    "children": [
+      {
+        "text": "So This is enough to "
+      },
+      {
+        "data": {
+          "openModal": true,
+          "slatenode": {
+            "href": "#product-owner"
+          }
+        },
+        "type": "Link",
+        "children": [
+          {
+            "text": "start"
+          }
+        ]
+      },
+      {
+        "text": " the matrix."
+      }
+    ]
+  }
+]
