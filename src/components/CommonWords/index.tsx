@@ -47,9 +47,10 @@ const CwBase: FC<Props> = ({ components, ...rest }) => {
         <Header>
           <tr>
             <th>Feed</th>
-            <th>Common</th>
-            <th>UnCommon</th>
+            <th>Cheap</th>
+            <th>Expensive</th>
             <th>Total Words</th>
+            <th>Cost per word</th>
           </tr>
         </Header>
         <Data />
@@ -135,6 +136,7 @@ const Row = (props) => {
       <td className="text-center">{high.toLocaleString(undefined, { style: 'percent', minimumFractionDigits: 2 })}</td>
       <td className="text-center">{low.toLocaleString(undefined, { style: 'percent', minimumFractionDigits: 2 })}</td>
       <td className="text-center">{total}</td>
+      <td className="text-center">{(low * 5 + high * 0.5).toLocaleString(undefined, { minimumFractionDigits: 2, style: 'currency', currency: 'USD' })}</td>
     </tr>
   )
 }
