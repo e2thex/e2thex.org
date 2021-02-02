@@ -65,6 +65,8 @@ const CwClean = flow(
 
 const placeholder = `http://www.ams.org/rss/conm.rss
 https://www.phase2technology.com/feed
+https://www.reddit.com/.rss
+http://rss.cnn.com/rss/cnn_topstories.rss
 https://critter.blog/feed/ `;
 const others = `
 
@@ -72,7 +74,6 @@ https://rss.nytimes.com/services/xml/rss/nyt/HomePage.xml
 http://rss.cnn.com/rss/cnn_topstories.rss
 https://www.reddit.com/r/HomeImprovement/.rss
 https://www.reddit.com/r/science/.rss
-https://www.reddit.com/.rss
 https://www.sup.org/rss/?feed=newbooks
 https://www.phase2technology.com/feed
 https://law.stanford.edu/blog/human-rights-center/feed/

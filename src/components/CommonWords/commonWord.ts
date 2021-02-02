@@ -50,9 +50,9 @@ const cleanUpWord = (word:string) => (word
 type RssResultPromise = (url:string) => Promise<Result>
 const rssResultPromise:RssResultPromise = (url) => new Promise((resolve, reject) => {
   const parser = new Parser();
-  
-  const CORS_PROXY = "https://cors-anywhere.herokuapp.com/"
-  parser.parseURL(`${CORS_PROXY}${url}`, (err, feed) => {
+  // const CORS_PROXY = "https://cors-anywhere.herokuapp.com/"
+  const processUrl = (u: string) => `https://thingproxy.freeboard.io/fetch/${u}`;
+  parser.parseURL(processUrl(url), (err, feed) => {
     if (err) {
       reject(err);
       return;
