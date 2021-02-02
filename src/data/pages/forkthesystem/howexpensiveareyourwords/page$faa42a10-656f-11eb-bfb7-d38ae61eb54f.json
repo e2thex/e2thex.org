@@ -3,7 +3,7 @@
     "type": "paragraph",
     "children": [
       {
-        "text": "The site "
+        "text": "intoThe site "
       },
       {
         "data": {
@@ -48,6 +48,22 @@
       {
         "text": "You can do multiple feeds one per line.",
         "Italic": true
+      }
+    ]
+  },
+  {
+    "type": "paragraph",
+    "children": [
+      {
+        "text": ""
+      }
+    ]
+  },
+  {
+    "type": "paragraph",
+    "children": [
+      {
+        "text": "One can also just past text into the Prose field to evaluate that text."
       }
     ]
   }

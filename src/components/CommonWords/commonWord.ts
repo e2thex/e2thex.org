@@ -47,7 +47,12 @@ const cleanUpWord = (word:string) => (word
   .trim()
   .toLowerCase()
 );
-type RssResultPromise = (url:string) => Promise<Result>
+type RssResultPromise = (url:string) => Promise<Result>;
+
+const commonnessHisto = (data:string) => {
+  const words = pullWordCandidates(data).map(cleanUpWord);
+  return histoMap(histoObj(words.map(commonness)), histoPercent);
+};
 const rssResultPromise:RssResultPromise = (url) => new Promise((resolve, reject) => {
   const parser = new Parser();
   // const CORS_PROXY = "https://cors-anywhere.herokuapp.com/"
@@ -78,7 +83,9 @@ const rssResultPromise:RssResultPromise = (url) => new Promise((resolve, reject)
 export {
   commonness,
   Commonness,
+  cleanUpWord,
   pullWordCandidates,
   rssResultPromise,
   Result,
+  commonnessHisto,
 };

@@ -3,12 +3,13 @@ import {
 } from '@bodiless/fclasses';
 import { flow, toString } from 'lodash';
 import React, { ComponentType, HTMLProps, FunctionComponent as FC, useContext, createContext, useState } from 'react';
-import { Result, rssResultPromise } from './commonWord';
+import { Commonness, commonnessHisto, pullWordCandidates, Result, rssResultPromise, cleanUpWord } from './commonWord';
 
 export type CwComponents = {
   Wrapper: ComponentType<StylableProps>,
   Form: ComponentType<StylableProps>,
   Input: ComponentType<StylableProps>,
+  InputText: ComponentType<StylableProps>,
   Submit: ComponentType<StylableProps>,
   Results: ComponentType<StylableProps>,
   Header: ComponentType<StylableProps>,
@@ -18,6 +19,7 @@ const cwComponentStart:CwComponents = {
   Wrapper: Div,
   Form: FForm,
   Input: Textarea,
+  InputText: Textarea,
   Submit: Button,
   Results: Table,
   Header: Thead,
@@ -31,6 +33,7 @@ const CwBase: FC<Props> = ({ components, ...rest }) => {
     Wrapper,
     Form,
     Input,
+    InputText,
     Submit,
     Results,
     Header,
@@ -41,6 +44,7 @@ const CwBase: FC<Props> = ({ components, ...rest }) => {
     <Wrapper {...rest}>
       <Form>
         <Input />
+        <InputText />
         <Submit>Process</Submit>
       </Form>
       <Results>
@@ -97,9 +101,12 @@ const asWrapper = (C) => (props) => {
   );
 };
 const asTextArea = (C) => (props) => {
-;
-  return <C id="urls" placeholder={placeholder} {...props} />;
+  return <><label for="urls">RSS URLs:</label><C id="urls" placeholder={placeholder} {...props} /></>;
 };
+const asTextAreaText = (C) => (props) => {
+  return <><label for="text">Prose:</label><C id="text" placeholder="Paste prose here" {...props} /></>;
+};
+
 
 const withSubmit = (C) => (props) => {
   const update = useContext(UpdateResultsContext);
@@ -123,7 +130,18 @@ const withSubmit = (C) => (props) => {
     console.log(urls);
     console.log(rolloverData);
     Promise.all(urls.map(rssResultPromise)).then(results => {
-      update([...rolloverData, ...results].sort((a, b) => b.high - a.high));
+      const textValue = document.getElementById('text').value;
+      const textHisto = commonnessHisto(textValue);
+      const textWords = pullWordCandidates(textValue).map(cleanUpWord);
+      const textResult = textValue ? [{
+        title: 'Your Text',
+        [Commonness.high]: textHisto[Commonness.high],
+        [Commonness.low]: textHisto[Commonness.low],
+        total: textWords.length,
+        feedUrl: 'no feed',
+      }] : [];
+
+      update([...rolloverData, ...results, ...textResult].sort((a, b) => b.high - a.high));
       console.log(results.sort((a, b) => b.high - a.high));
     }).catch(err => console.log(err));
   };
@@ -153,6 +171,7 @@ const asData = (C) => (props) => {
 
 const CommonWords = withDesign({
   Input: flow(asTextArea, addClasses('w-full rounded border h-10')),
+  InputText: flow(asTextAreaText, addClasses('w-full rounded border h-10')),
   Submit: flow(withSubmit, addClasses('w-full border hover:by-gray-300 bg-gray-100 rounded b-1')),
   Wrapper: asWrapper,
   Data: asData,
