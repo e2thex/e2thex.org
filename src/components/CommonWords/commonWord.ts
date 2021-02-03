@@ -57,20 +57,13 @@ const resultInResults = (results:Result[]) => (r:Result) => (
   results.map(r => r.id).includes(r.id)
 );
 const resultNotInResults = (results:Result[]) => (r:Result) => !resultInResults(results)(r);
-const overrideResults = (prevResults:Result[]) => (results:Result[]) => {
-  
-  console.log(prevResults);
-  console.log(results);
-  console.log(...prevResults.filter(resultNotInResults(results)));
-  const out = [...prevResults.filter(resultNotInResults(results)), ...results]
-  console.log(out);
-  return out;
-
-}
+const overrideResults = (prevResults:Result[]) => (results:Result[]) => (
+  [...prevResults.filter(resultNotInResults(results)), ...results]
+);
 const rssResultPromise:RssResultPromise = (url) => new Promise((resolve, reject) => {
   const parser = new Parser();
-  const CORS_PROXY = "https://thingproxy.freeboard.io/fetch/"
-  const processUrl = (u: string) => `${u}`;
+  const CORS_PROXY = 'https://thingproxy.freeboard.io/fetch/';
+  const processUrl = (u: string) => `${CORS_PROXY}${u}`;
   parser.parseURL(processUrl(url), (err, feed) => {
     if (err) {
       reject(err);
