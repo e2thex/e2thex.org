@@ -1,62 +1,76 @@
 import Parser from 'rss-parser';
+import syllable from 'syllable';
+import fleschKincaidA from 'flesch-kincaid';
+import getWords from 'get-words';
+import { extract as getSentences } from 'sentence-extractor';
 import c5000 from './5000.json';
 
-enum Commonness {
-  high='high',
-  normal='normal',
-  low='low',
-}
-const commonness = (word:string) => (
-  c5000.includes(word) ? Commonness.high : Commonness.low
-)
+const words = (text:string) => getWords(text) as string[];
+const sentences = (text:string) => text.split(/[?!.]\s/) as string[];
+const syllableCount = (text:string) => words(text).map(syllable).reduce((a, b) => a + b, 0);
 
-const pullWordCandidates = (data:string) => data.split(/( |\n|\r)/);
-
-type Histo = {
-  [index:string] : number,
-};
-const histoObj = (items:string[]) => (
-  items
-    .reduce((acc, i) => ({...acc, [i]: (acc[i] || 0 ) + 1}),{} as Histo)
-)
-type HistoItem = {
-  key:string,
-  value:number,
-}
-type AlterFunc = (key: string, value: number, histo: Histo) => number
-type HistoMapFunc = (h:Histo, f:AlterFunc) => Histo
-const histoMap:HistoMapFunc = (histo, func) => (
-  Object.keys(histo)
-    .reduce((acc, key) => ({ ...acc, [key]: func(key, histo[key], histo) }), {} as Histo)
-);
-const histoTotal = (histo:Histo) => Object.keys(histo).reduce((c,i) => c + histo[i], 0);
-
-const histoPercent:AlterFunc = (key, value, histo) => (
-  value / histoTotal(histo)
-);
-
+const isFiftyCentWord = (word:string) => c5000.includes(word);
+const isFiveDollarWord = (word:string) => !c5000.includes(word);
 type Result = {
   title: string
-  [Commonness.high]: number,
-  [Commonness.low]: number,
+  cheap: number,
+  expensive: number,
   total: number,
-  feedUrl: string,
+  fk: number
+  id: string,
 };
-const cleanUpWord = (word:string) => (word
-  .replace(/[^a-zA-Z\s-'’]/g, '')
-  .trim()
-  .toLowerCase()
-);
 type RssResultPromise = (url:string) => Promise<Result>;
-
-const commonnessHisto = (data:string) => {
-  const words = pullWordCandidates(data).map(cleanUpWord);
-  return histoMap(histoObj(words.map(commonness)), histoPercent);
+const fleschKincaid = (data:string) => {
+  const totalWords = words(data).length;
+  const totalSentences = sentences(data).length;
+  const totalSymbol = syllableCount(data);
+  console.log({
+    sentence: totalSentences,
+    word: totalWords,
+    syllable: totalSymbol,
+  });
+  return Math.round(fleschKincaidA({
+    sentence: totalSentences,
+    word: totalWords,
+    syllable: totalSymbol,
+  })) as number;
 };
+
+const result = (text:string, title:string, id:string) => {
+  const total = words(text).length;
+  const cheap = words(text).filter(isFiftyCentWord).length / total;
+  const expensive = 1 - cheap;
+  return {
+    title,
+    cheap,
+    expensive,
+    total,
+    fk: fleschKincaid(text),
+    id,
+  };
+};
+const idInResults = (results:Result[]) => (id:string) => (
+  results.map(r => r.id).includes(id)
+);
+const idNotInResults = (results:Result[]) => (id:string) => !idInResults(results)(id); 
+const resultInResults = (results:Result[]) => (r:Result) => (
+  results.map(r => r.id).includes(r.id)
+);
+const resultNotInResults = (results:Result[]) => (r:Result) => !resultInResults(results)(r);
+const overrideResults = (prevResults:Result[]) => (results:Result[]) => {
+  
+  console.log(prevResults);
+  console.log(results);
+  console.log(...prevResults.filter(resultNotInResults(results)));
+  const out = [...prevResults.filter(resultNotInResults(results)), ...results]
+  console.log(out);
+  return out;
+
+}
 const rssResultPromise:RssResultPromise = (url) => new Promise((resolve, reject) => {
   const parser = new Parser();
-  // const CORS_PROXY = "https://cors-anywhere.herokuapp.com/"
-  const processUrl = (u: string) => `https://thingproxy.freeboard.io/fetch/${u}`;
+  const CORS_PROXY = "https://thingproxy.freeboard.io/fetch/"
+  const processUrl = (u: string) => `${u}`;
   parser.parseURL(processUrl(url), (err, feed) => {
     if (err) {
       reject(err);
@@ -64,28 +78,15 @@ const rssResultPromise:RssResultPromise = (url) => new Promise((resolve, reject)
     }
     let data = '';
     feed.items.forEach((entry) => {
-      // console.log(Object.keys(entry));
       const content = entry['content:encodedSnippet'] || entry.contentSnippet;
       data = `${data} ${content}`;
     });
-    const words = pullWordCandidates(data).map(cleanUpWord);
-    const output = histoMap(histoObj(words.map(commonness)), histoPercent);
-    const result = {
-      title: feed.title,
-      [Commonness.high]: output[Commonness.high],
-      [Commonness.low]: output[Commonness.low],
-      total: words.length,
-      feedUrl: feed.feedUrl,
-    };
-    resolve(result as Result);
+    resolve(result(data, feed.title || 'No Title', url) as Result);
   });
 });
 export {
-  commonness,
-  Commonness,
-  cleanUpWord,
-  pullWordCandidates,
-  rssResultPromise,
+  result,
   Result,
-  commonnessHisto,
+  rssResultPromise,
+  overrideResults,
 };

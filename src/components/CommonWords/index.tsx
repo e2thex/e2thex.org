@@ -1,9 +1,9 @@
 import {
   addClasses, Button, designable, DesignableComponentsProps, Div, Form as FForm, StylableProps, Table, Tbody, Textarea, Thead, withDesign,
 } from '@bodiless/fclasses';
-import { flow, toString } from 'lodash';
+import { flow } from 'lodash';
 import React, { ComponentType, HTMLProps, FunctionComponent as FC, useContext, createContext, useState } from 'react';
-import { Commonness, commonnessHisto, pullWordCandidates, Result, rssResultPromise, cleanUpWord } from './commonWord';
+import { Result, rssResultPromise, result, overrideResults } from './commonWord';
 
 export type CwComponents = {
   Wrapper: ComponentType<StylableProps>,
@@ -55,6 +55,7 @@ const CwBase: FC<Props> = ({ components, ...rest }) => {
             <th>Expensive</th>
             <th>Total Words</th>
             <th>Cost per word</th>
+            <th>FK Grade Level</th>
           </tr>
         </Header>
         <Data />
@@ -86,10 +87,6 @@ http://www.nationalreview.com/rss.xml`;
 
 const ResultsContext = createContext([] as Result[]);
 const UpdateResultsContext = createContext((a:Result[]) => null);
-const asResults = (C) => (props) => {
-  const url = placeholder.split('\n');
-  const data = rssResultPromise
-}
 const asWrapper = (C) => (props) => {
   const [data, update] = useState([] as Result[]);
   return (
@@ -107,55 +104,41 @@ const asTextAreaText = (C) => (props) => {
   return <><label for="text">Prose:</label><C id="text" placeholder="Paste prose here" {...props} /></>;
 };
 
-
+const idInResults = (results:Result[]) => (id:string) => (
+  results.map(r => r.id).includes(id)
+);
+const idNotInResults = (results:Result[]) => (id:string) => !idInResults(results)(id); 
 const withSubmit = (C) => (props) => {
   const update = useContext(UpdateResultsContext);
   const data = useContext(ResultsContext);
   const submit = (event:Event) => {
     event.preventDefault();
     event.stopPropagation();
-    const raw = document.getElementById('urls').value;
-    const notProcessedYet = (url:string) => !data.map(i => i.feedUrl).includes(url);
-    const urls = [...raw.trim().split('\n'), ...placeholder.split('\n')]
-      .map(i => i.trim())
-      .filter(v => v.length > 0)
-      .filter(notProcessedYet);
-    const rolloverData = data.filter(i => {
-      const r = i.feedUrl && !urls.includes(i.feedUrl.trim());
-      console.log(urls);
-      console.log(i);
-      console.log(`${i.feedUrl} ${r}`);
-      return r;
-    });
-    console.log(urls);
-    console.log(rolloverData);
-    Promise.all(urls.map(rssResultPromise)).then(results => {
+    const urlFromUserRaw = document.getElementById('urls').value || '';
+    const urlFromUser = urlFromUserRaw.trim().split('\n').map(s => s.trim()) as string[];
+    const urlFromPlaceholders = placeholder.split('\n');
+    const urlCandidates =[...urlFromUser, ...urlFromPlaceholders].filter(v => v.length > 0);
+    const urlsToProcess = urlCandidates.filter(idNotInResults(data));
+    Promise.all(urlsToProcess.map(rssResultPromise)).then(results => {
       const textValue = document.getElementById('text').value;
-      const textHisto = commonnessHisto(textValue);
-      const textWords = pullWordCandidates(textValue).map(cleanUpWord);
-      const textResult = textValue ? [{
-        title: 'Your Text',
-        [Commonness.high]: textHisto[Commonness.high],
-        [Commonness.low]: textHisto[Commonness.low],
-        total: textWords.length,
-        feedUrl: 'no feed',
-      }] : [];
+      const textResult = textValue ? [result(textValue, 'Prose Entered', 'text')] : [] as Result[];
+      const newResults = overrideResults(data)([...results, ...textResult])
 
-      update([...rolloverData, ...results, ...textResult].sort((a, b) => b.high - a.high));
-      console.log(results.sort((a, b) => b.high - a.high));
+      update(newResults.sort((a, b) => b.cheap - a.cheap));
     }).catch(err => console.log(err));
   };
   return <C {...props} onClick={submit} />;
 };
 const Row = (props) => {
-  const { title, high, low, total, components } = props;
+  const { title, cheap, expensive, total, fk } = props;
   return (
     <tr>
       <th className="text-left">{title}</th>
-      <td className="text-center">{high.toLocaleString(undefined, { style: 'percent', minimumFractionDigits: 2 })}</td>
-      <td className="text-center">{low.toLocaleString(undefined, { style: 'percent', minimumFractionDigits: 2 })}</td>
+      <td className="text-center">{cheap.toLocaleString(undefined, { style: 'percent', minimumFractionDigits: 2 })}</td>
+      <td className="text-center">{expensive.toLocaleString(undefined, { style: 'percent', minimumFractionDigits: 2 })}</td>
       <td className="text-center">{total}</td>
-      <td className="text-center">{(low * 5 + high * 0.5).toLocaleString(undefined, { minimumFractionDigits: 2, style: 'currency', currency: 'USD' })}</td>
+      <td className="text-center">{(expensive * 5 + cheap * 0.5).toLocaleString(undefined, { minimumFractionDigits: 2, style: 'currency', currency: 'USD' })}</td>
+      <td className="text-center">{fk}</td>
     </tr>
   )
 }
