@@ -7,123 +7,214 @@ import {
   StylableProps,
   Table as STable,
   Tbody as STbody,
-  Td as STd,
-  Th as STh,
+  Td,
+  Th,
   Thead as SThead,
-  Tr as STr,
+  Tr,
   Tfoot as STfoot,
-  withDesign
+  withDesign,
+  withoutProps,
+  DesignableComponentsProps,
 } from '@bodiless/fclasses';
 import { flow } from 'lodash';
 import React, { ComponentType, FunctionComponent, HTMLProps } from 'react';
-import { asBold } from '../Elements.token';
-import { DesignableComponentsProps}  from '@bodiless/fclasses';
-import { withEditableFinalTrail } from '../Breadcrumbs/MenuBreadcrumbs.token';
-import { withEditorFullFeatured } from '../Editors';
-import { withNode, withNodeKey } from '@bodiless/core';
+import { withNode, withNodeKey as withNodeKeyReal } from '@bodiless/core';
 
-type BTable = {
-  Table: ComponentType<StylableProps>,
+enum Section {
+  head = 'head',
+  body = 'body',
+  foot = 'foot',
+}
+type BRowProps = StylableProps & {
+  row:string,
+  section: Section,
+  rowIndex: number;
+};
+type BCellProps = StylableProps & BRowProps & { column:string, columnIndex:number };
+const DefaultRow = withoutProps('row', 'section', 'rowIndex')(Tr);
+// const DefaultCell = (props:BCellProps) => {
+//  const { section } = props;
+ //  const Cell = withoutProps(['row', 'column', 'section', 'rowIndex', 'columnIndex'])(
+    // section === Section.head ? Th : Td,
+  // );
+  // return <Cell {...props} />;
+const CellA = (props:BCellProps) => {
+  const { section } = props;
+  const Cell = section === Section.head ? Th : Td;
+  return <Cell {...props} />; 
+ };
+ const DefaultCell = withoutProps(['row', 'column', 'section', 'rowIndex', 'columnIndex'])(CellA);
+// };
+type TableComponents = {
+  Wrapper: ComponentType<StylableProps>,
   TBody: ComponentType<StylableProps>,
   THead: ComponentType<StylableProps>,
   TFoot: ComponentType<StylableProps>,
-  TR: ComponentType<StylableProps>,
-  TD: ComponentType<StylableProps>,
-  TH: ComponentType<StylableProps>,
+  Row: ComponentType<BRowProps>,
+  Cell: ComponentType<BCellProps>,
 };
-const bTablecomponents = {
-  Table: STable,
+const tablComponentsStart:TableComponents = {
+  Wrapper: STable,
   TBody: STbody,
   THead: SThead,
   TFoot: STfoot,
-  Tr: STr,
-  Td: STd,
-  Th: STh,
+  Row: DefaultRow,
+  Cell: DefaultCell,
 };
 
-const BTable = ({columns, headRows, rows, components, ...rest}) => {
+type Props = {
+  columns: string[],
+  headRows: string[],
+  footRows: string[],
+  rows: string[],
+} & DesignableComponentsProps<TableComponents> & HTMLProps<HTMLElement>
+
+type TableSectionProps = {
+  Wrapper: ComponentType<StylableProps>,
+  Row: ComponentType<BRowProps>,
+  Cell: ComponentType<BCellProps>,
+  section: Section,
+  columns: string[],
+  rows: string[],
+};
+const TableSection = (props:TableSectionProps) => {
   const {
-    Table,
-    TBody,
-    THead: THeadx,
-    TFoot,
-    Th,
-    Tr,
-    Td,
-  } = components;
-  const THead = withNodeKey('thead')(withNode(THeadx));
+    Wrapper,
+    Row,
+    Cell,
+    rows,
+    section,
+    columns,
+  } = props;
   return (
-    <Table {...rest}>
-      <THead>
-        {headRows.map((row) =>{
-          const Row = withNodeKey(row)(withNode(Tr));
-          return (
-            <Row key={row}>
-             {columns.map((col) => {
-                const Cell = withNodeKey(col)(withNode(Th));
-                return <Cell key={col} />
-              })} 
-            </Row>
-          );
-        })}
-      </THead>
-      <TBody>
-        {rows.map((row) =>{
-          const Row = withNodeKey(row)(withNode(Tr));
-          return (
-            <Row key={row}>
-             {columns.map((col) => {
-                const Cell = withNodeKey(col)(withNode(Td));
-                return <Cell key={col} />
-              })} 
-            </Row>
-          );
-        })}
-      </TBody>
-    </Table>
+    <Wrapper>
+      {(rows || []).map((row, rowIndex) => (
+        <Row key={row} {...{ row, rowIndex, section }}>
+          {(columns || []).map((column, columnIndex) => (
+            <Cell
+              key={column}
+              {...{
+                columnIndex,
+                column,
+                row,
+                rowIndex,
+                section,
+              }}
+            />
+          ))}
+        </Row>
+      ))}
+    </Wrapper>
   );
 };
-const CleanBTable = designable(bTablecomponents, 'Table')(BTable);
+const BTable:FunctionComponent<Props> = (props) => {
+  const {
+    columns,
+    footRows,
+    headRows,
+    rows,
+    components,
+    ...rest
+  } = props;
+  const {
+    Wrapper,
+    TBody,
+    THead,
+    TFoot,
+    Row,
+    Cell,
+  } = components;
+  return (
+    <Wrapper {...rest}>
+      <TableSection
+        {...{
+          Wrapper: THead,
+          Row,
+          Cell,
+          section: Section.head,
+          rows: headRows,
+          columns,
+        }}
+      />
+      <TableSection
+        {...{
+          Wrapper: TBody,
+          Row,
+          Cell,
+          section: Section.body,
+          rows,
+          columns,
+        }}
+      />
+      <TableSection
+        {...{
+          Wrapper: TFoot,
+          Row,
+          Cell,
+          section: Section.foot,
+          rows: footRows,
+          columns,
+        }}
+      />
+    </Wrapper>
+  );
+};
+const CleanTable = designable(tablComponentsStart, 'Table')(BTable);
 
-const withCols = <A extends Object> (...columns:string[]) => (Component:ComponentType<A>) => (props:A) => (
-  <Component columns={columns} {...props} />
+type IfCellIs = (props:BCellProps) => boolean;
+const ifCellIs = (func:IfCellIs) => (hoc:HOC) => (
+  (Component:ComponentType<BCellProps>) => (props:BCellProps) => {
+    const C = func(props) ? hoc(Component) : Component;
+    return <C {...props} />;
+  });
+const ifSectionIs = (sectionWanted:Section) => (
+  ifCellIs(({ section }) => section === sectionWanted)
 );
-const withRows = <A extends Object> (...rows:string[]) => (Component:ComponentType<A>) => (props:A) => (
-  <Component rows={rows} {...props} />
-);
+
+type nodeKeyFunc<A> = (props:A) => any;
+const withNodeKeyFunc = <A extends Props> (func:nodeKeyFunc<A>) => (
+  (Component:ComponentType<A>) => (props:A) => {
+    const nodeKey = func(props);
+    return <Component nodeKey={nodeKey} {...props} />;
+  });
+const withNodeKeysTables = withDesign({
+  TBody: flow(withNode, withNodeKeyReal(Section.body)),
+  THead: flow(withNode, withNodeKeyReal(Section.head)),
+  TFoot: flow(withNode, withNodeKeyReal(Section.foot)),
+  Row: flow(withNode, withNodeKeyFunc(p => p.row)),
+  Cell: flow(withNode, withNodeKeyFunc(p => p.column)),
+});
+const withCols = <A extends Object> (...columns:string[]) => (
+  (Component:ComponentType<A>) => (props:A) => (
+    <Component columns={columns} {...props} />
+  ));
+const withRows = <A extends Object> (...rows:string[]) => (
+  (Component:ComponentType<A>) => (props:A) => (
+    <Component rows={rows} {...props} />
+  ));
 const withXRows = (x:number) => {
   const rows = (new Array(x)).fill('').map((t, i) => i.toString());
   return withRows(...rows);
 }
-const withHeadRows = <A extends Object> (...rows:string[]) => (Component:ComponentType<A>) => (props:A) => (
-  <Component headRows={rows} {...props} />
-);
-const RACI1 = flow(
-  withCols('task', 'developer', 'po', 'sm'),
-  withXRows(12),
-  withHeadRows('0'),
+const withHeadRows = <A extends Object> (...rows:string[]) => (
+  (Component:ComponentType<A>) => (props:A) => (
+    <Component headRows={rows} {...props} />
+  ));
+const forCell = (sectionIn:Section) => (rowIn:string) => (columnIn:string) => (hoc:HOC) => (
   withDesign({
-    Td: flow(addClasses('min-w-1'), withEditorFullFeatured('cell', 'Cell')),
-    Th: flow(addClasses('min-w-1'), withEditorFullFeatured('cell', 'Cell')),
-  }),
-)(CleanBTable);
-/*
-const RACI2 = flow(
-  withRACIBodyRow('Row01')('Creating a plan for the Sprint, the Sprint Backlog;'),
-  withRACIBodyRow('Row02')('Instilling quality by adhering to a Definition of Done;'),
-  withRACIBodyRow('Row03')('Adapting their plan each day toward the Sprint Goal; and,'),
-  withRACIBodyRow('Row04')('Holding each other accountable as professionals.'),
-  withRACIBodyRow('Row05')('maximizing the value of the product resulting from the work of the Scrum Team'),
-  withRACIBodyRow('Row06')('Developing and explicitly communicating the Product Goal;'),
-  withRACIBodyRow('Row07')('Creating and clearly communicating Product Backlog items;'),
-  withRACIBodyRow('Row08')('Ordering Product Backlog items; and,'),
-  withRACIBodyRow('Row09')('Ensuring that the Product Backlog is transparent, visible and understood'),
-  withRACIBodyRow('Row10')(' establishing Scrum as defined in the Scrum Guide'),
-  withRACIBodyRow('Row11')('the Scrum Team’s effectiveness'),
-)(CleanTable);
-*/
-// const HeadRow = flow(asBold, addClasses('border px-5 align-center'))(Th);
-// const TD = flow(addClasses('border px-5 text-center'))(Td);
+    Cell: ifCellIs(({ section, row, column }) => (
+      (section === sectionIn) && (row === rowIn) && (column === columnIn)
+    ))(hoc),
+  })
+);
+const forCells = (func:IfCellIs) => (hoc:HOC) => withDesign({
+  Cell: ifCellIs(func)(hoc),
+});
 export {
-  RACI1
+  withCols,
+  withXRows,
+  withHeadRows,
+  withNodeKeysTables,
+  forCells,
+  CleanTable,
 };

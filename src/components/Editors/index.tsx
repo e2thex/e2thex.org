@@ -15,6 +15,7 @@
 import { flow } from 'lodash';
 import {
   asBlock,
+  asInline,
   withButton,
 } from '@bodiless/richtext';
 import { RichText } from '@bodiless/richtext-ui';
@@ -42,7 +43,7 @@ import {
 } from '../Elements.token';
 import Math from '../Tex';
 import withEditor from './withEditor';
-import { Highlight } from '../ScrumGuild';
+import Highlight from '../AnchorHighlight';
 
 const simpleDesign = {
   SuperScript: asSuperScript,
@@ -77,8 +78,8 @@ const fullFeaturedDesign = {
   H1: asHeader1,
   H2: asHeader2,
   H3: asHeader3,
-  Math: flow(replaceWith(Math), withButton('functions')),
-  Highlight: flow(replaceWith(Highlight), withButton('highlight')),
+  // Math: flow(replaceWith(Math), withButton('functions')),
+  Highlight: flow(replaceWith(Highlight), asInline, withButton('highlight')),
 };
 
 const EditorSimple = withDesign(simpleDesign)(RichText);

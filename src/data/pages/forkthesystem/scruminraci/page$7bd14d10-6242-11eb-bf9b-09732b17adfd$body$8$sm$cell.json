@@ -1,0 +1,27 @@
+[
+  {
+    "type": "AlignCenter",
+    "children": [
+      {
+        "text": ""
+      },
+      {
+        "data": {
+          "openModal": true,
+          "slatenode": {
+            "href": "#scrumMasterScrum"
+          }
+        },
+        "type": "Link",
+        "children": [
+          {
+            "text": "A"
+          }
+        ]
+      },
+      {
+        "text": ""
+      }
+    ]
+  }
+]

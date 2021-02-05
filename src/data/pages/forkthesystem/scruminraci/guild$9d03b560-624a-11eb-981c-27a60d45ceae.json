@@ -15,7 +15,21 @@
     "type": "paragraph",
     "children": [
       {
-        "text": "This HTML version of the Scrum Guide is a direct port of the November 2020 version available as a PDF here."
+        "text": ""
+      },
+      {
+        "data": {
+          "openModal": true
+        },
+        "type": "Highlight",
+        "children": [
+          {
+            "text": "This HTML version of the Scrum Guide is a direct port of the November 2020 version available as a PDF here."
+          }
+        ]
+      },
+      {
+        "text": ""
       }
     ]
   },
@@ -23,7 +37,21 @@
     "type": "H2",
     "children": [
       {
-        "text": "Purpose of the Scrum Guide"
+        "text": ""
+      },
+      {
+        "data": {
+          "openModal": true
+        },
+        "type": "Highlight",
+        "children": [
+          {
+            "text": "Purpose of the Scrum Guide"
+          }
+        ]
+      },
+      {
+        "text": ""
       }
     ]
   },
@@ -31,7 +59,24 @@
     "type": "paragraph",
     "children": [
       {
-        "text": "We developed Scrum in the early 1990s. We wrote the first version of the Scrum Guide in 2010 to help people worldwide understand Scrum. We have evolved the Guide since then through small, functional updates. Together, we stand behind it."
+        "text": ""
+      },
+      {
+        "data": {
+          "openModal": true,
+          "slatenode": {
+            "hid": "testatest"
+          }
+        },
+        "type": "Highlight",
+        "children": [
+          {
+            "text": "We developed Scrum in the early 1990s. We wrote the first version of the Scrum Guide in 2010 to help people worldwide understand Scrum. We have evolved the Guide since then through small, functional updates. Together, we stand behind it."
+          }
+        ]
+      },
+      {
+        "text": ""
       }
     ]
   },
@@ -39,7 +84,24 @@
     "type": "paragraph",
     "children": [
       {
-        "text": "The Scrum Guide contains the definition of Scrum. Each element of the framework serves a specific purpose that is essential to the overall value and results realized with Scrum. Changing the core design or ideas of Scrum, leaving out elements, or not following the rules of Scrum, covers up problems and limits the benefits of Scrum, potentially even rendering it useless."
+        "text": ""
+      },
+      {
+        "data": {
+          "openModal": true,
+          "slatenode": {
+            "hid": "testatest"
+          }
+        },
+        "type": "Highlight",
+        "children": [
+          {
+            "text": "The Scrum Guide contains the definition of Sc"
+          }
+        ]
+      },
+      {
+        "text": "rum. Each element of the framework serves a specific purpose that is essential to the overall value and results realized with Scrum. Changing the core design or ideas of Scrum, leaving out elements, or not following the rules of Scrum, covers up problems and limits the benefits of Scrum, potentially even rendering it useless."
       }
     ]
   },
@@ -347,7 +409,24 @@
     "type": "paragraph",
     "children": [
       {
-        "text": "The specific skills needed by the Developers are often broad and will vary with the domain of work. However, the Developers are always accountable for:"
+        "text": ""
+      },
+      {
+        "data": {
+          "openModal": true,
+          "slatenode": {
+            "hid": "developerAccountablity"
+          }
+        },
+        "type": "Highlight",
+        "children": [
+          {
+            "text": "The specific skills needed by the Developers are often broad and will vary with the domain of work. However, the Developers are always accountable for:"
+          }
+        ]
+      },
+      {
+        "text": ""
       }
     ]
   },
@@ -355,7 +434,24 @@
     "type": "paragraph",
     "children": [
       {
-        "text": "Creating a plan for the Sprint, the Sprint Backlog;"
+        "text": ""
+      },
+      {
+        "data": {
+          "openModal": true,
+          "slatenode": {
+            "hid": "developerAccountablity"
+          }
+        },
+        "type": "Highlight",
+        "children": [
+          {
+            "text": "* Creating a plan for the Sprint, the Sprint Backlog;"
+          }
+        ]
+      },
+      {
+        "text": ""
       }
     ]
   },
@@ -363,7 +459,24 @@
     "type": "paragraph",
     "children": [
       {
-        "text": "Instilling quality by adhering to a Definition of Done;"
+        "text": ""
+      },
+      {
+        "data": {
+          "openModal": true,
+          "slatenode": {
+            "hid": "developerAccountablity"
+          }
+        },
+        "type": "Highlight",
+        "children": [
+          {
+            "text": "* Instilling quality by adhering to a Definition of Done;"
+          }
+        ]
+      },
+      {
+        "text": ""
       }
     ]
   },
@@ -371,7 +484,24 @@
     "type": "paragraph",
     "children": [
       {
-        "text": "Adapting their plan each day toward the Sprint Goal; and,"
+        "text": ""
+      },
+      {
+        "data": {
+          "openModal": true,
+          "slatenode": {
+            "hid": "developerAccountablity"
+          }
+        },
+        "type": "Highlight",
+        "children": [
+          {
+            "text": "* Adapting their plan each day toward the Sprint Goal; and,"
+          }
+        ]
+      },
+      {
+        "text": ""
       }
     ]
   },
@@ -379,7 +509,24 @@
     "type": "paragraph",
     "children": [
       {
-        "text": "Holding each other accountable as professionals."
+        "text": ""
+      },
+      {
+        "data": {
+          "openModal": true,
+          "slatenode": {
+            "hid": "developerAccountablity"
+          }
+        },
+        "type": "Highlight",
+        "children": [
+          {
+            "text": "* Holding each other accountable as professionals."
+          }
+        ]
+      },
+      {
+        "text": ""
       }
     ]
   },
@@ -395,7 +542,24 @@
     "type": "paragraph",
     "children": [
       {
-        "text": "The Product Owner is accountable for maximizing the value of the product resulting from the work of the Scrum Team. How this is done may vary widely across organizations, Scrum Teams, and individuals."
+        "text": ""
+      },
+      {
+        "data": {
+          "openModal": true,
+          "slatenode": {
+            "hid": "productOwnerMaximizeValue"
+          }
+        },
+        "type": "Highlight",
+        "children": [
+          {
+            "text": "The Product Owner is accountable for maximizing the value of the product resulting from the work of the Scrum Team. How this is done may vary widely across organizations, Scrum Teams, and individuals."
+          }
+        ]
+      },
+      {
+        "text": ""
       }
     ]
   },
@@ -403,7 +567,24 @@
     "type": "paragraph",
     "children": [
       {
-        "text": "The Product Owner is also accountable for effective Product Backlog management, which includes:"
+        "text": ""
+      },
+      {
+        "data": {
+          "openModal": true,
+          "slatenode": {
+            "hid": "productOwnerBacklog"
+          }
+        },
+        "type": "Highlight",
+        "children": [
+          {
+            "text": "The Product Owner is also accountable for effective Product Backlog management, which includes:"
+          }
+        ]
+      },
+      {
+        "text": ""
       }
     ]
   },
@@ -411,7 +592,7 @@
     "type": "paragraph",
     "children": [
       {
-        "text": "Developing and explicitly communicating the Product Goal;"
+        "text": "* Developing and explicitly communicating the Product Goal;"
       }
     ]
   },
@@ -419,7 +600,7 @@
     "type": "paragraph",
     "children": [
       {
-        "text": "Creating and clearly communicating Product Backlog items;"
+        "text": "* Creating and clearly communicating Product Backlog items;"
       }
     ]
   },
@@ -427,7 +608,7 @@
     "type": "paragraph",
     "children": [
       {
-        "text": "Ordering Product Backlog items; and,"
+        "text": "* Ordering Product Backlog items; and,"
       }
     ]
   },
@@ -435,7 +616,7 @@
     "type": "paragraph",
     "children": [
       {
-        "text": "Ensuring that the Product Backlog is transparent, visible and understood."
+        "text": "* Ensuring that the Product Backlog is transparent, visible and understood."
       }
     ]
   },
@@ -475,7 +656,24 @@
     "type": "paragraph",
     "children": [
       {
-        "text": "The Scrum Master is accountable for establishing Scrum as defined in the Scrum Guide. They do this by helping everyone understand Scrum theory and practice, both within the Scrum Team and the organization."
+        "text": ""
+      },
+      {
+        "data": {
+          "openModal": true,
+          "slatenode": {
+            "hid": "scrumMasterScrum"
+          }
+        },
+        "type": "Highlight",
+        "children": [
+          {
+            "text": "The Scrum Master is accountable for establishing Scrum as defined in the Scrum Guide."
+          }
+        ]
+      },
+      {
+        "text": " They do this by helping everyone understand Scrum theory and practice, both within the Scrum Team and the organization."
       }
     ]
   },
@@ -483,7 +681,24 @@
     "type": "paragraph",
     "children": [
       {
-        "text": "The Scrum Master is accountable for the Scrum Team’s effectiveness. They do this by enabling the Scrum Team to improve its practices, within the Scrum framework."
+        "text": ""
+      },
+      {
+        "data": {
+          "openModal": true,
+          "slatenode": {
+            "hid": "scrumMasterEffectiveness"
+          }
+        },
+        "type": "Highlight",
+        "children": [
+          {
+            "text": "The Scrum Master is accountable for the Scrum Team’s effectiveness."
+          }
+        ]
+      },
+      {
+        "text": " They do this by enabling the Scrum Team to improve its practices, within the Scrum framework."
       }
     ]
   },
@@ -779,7 +994,24 @@
     "type": "paragraph",
     "children": [
       {
-        "text": "The Product Owner proposes how the product could increase its value and utility in the current Sprint. The whole Scrum Team then collaborates to define a Sprint Goal that communicates why the Sprint is valuable to stakeholders. The Sprint Goal must be finalized prior to the end of Sprint Planning."
+        "text": ""
+      },
+      {
+        "data": {
+          "openModal": true,
+          "slatenode": {
+            "hid": "DeveloperConsultValue"
+          }
+        },
+        "type": "Highlight",
+        "children": [
+          {
+            "text": "The Product Owner proposes how the product could increase its value and utility in the current Sprint. The whole Scrum Team then collaborates to define a Sprint Goal that communicates why the Sprint is valuable to stakeholders"
+          }
+        ]
+      },
+      {
+        "text": ". The Sprint Goal must be finalized prior to the end of Sprint Planning."
       }
     ]
   },
@@ -819,7 +1051,24 @@
     "type": "paragraph",
     "children": [
       {
-        "text": "For each selected Product Backlog item, the Developers plan the work necessary to create an Increment that meets the Definition of Done. This is often done by decomposing Product Backlog items into smaller work items of one day or less. How this is done is at the sole discretion of the Developers. No one else tells them how to turn Product Backlog items into Increments of value."
+        "text": ""
+      },
+      {
+        "data": {
+          "openModal": true,
+          "slatenode": {
+            "hid": "createAnIncrement"
+          }
+        },
+        "type": "Highlight",
+        "children": [
+          {
+            "text": "For each selected Product Backlog item, the Developers plan the work necessary to create an Increment that meets the Definition of Done. This is often done by decomposing Product Backlog items into smaller work items of one day or less. How this is done is at the sole discretion of the Developers. No one else tells them how to turn Product Backlog items into Increments of value."
+          }
+        ]
+      },
+      {
+        "text": ""
       }
     ]
   },
@@ -939,7 +1188,21 @@
     "type": "paragraph",
     "children": [
       {
-        "text": "The Scrum Team inspects how the last Sprint went with regards to individuals, interactions, processes, tools, and their Definition of Done. Inspected elements often vary with the domain of work. Assumptions that led them astray are identified and their origins explored. The Scrum Team discusses what went well during the Sprint, what problems it encountered, and how those problems were (or were not) solved."
+        "text": ""
+      },
+      {
+        "data": {
+          "openModal": true
+        },
+        "type": "Highlight",
+        "children": [
+          {
+            "text": "The Scrum Team inspects how the last Sprint went with regards to individuals, interactions, processes, tools, and their Definition of Done. Inspected elements often vary with the domain of work. Assumptions that led them astray are identified and their origins explored. The Scrum Team discusses what went well during the Sprint, what problems it encountered, and how those problems were (or were not) solved."
+          }
+        ]
+      },
+      {
+        "text": ""
       }
     ]
   },
@@ -947,7 +1210,24 @@
     "type": "paragraph",
     "children": [
       {
-        "text": "The Scrum Team identifies the most helpful changes to improve its effectiveness. The most impactful improvements are addressed as soon as possible. They may even be added to the Sprint Backlog for the next Sprint."
+        "text": ""
+      },
+      {
+        "data": {
+          "openModal": true,
+          "slatenode": {
+            "hid": "consultedEffectiveness"
+          }
+        },
+        "type": "Highlight",
+        "children": [
+          {
+            "text": "The Scrum Team identifies the most helpful changes to improve its effectiveness. The most impactful improvements are addressed as soon as possible. They may even be added to the Sprint Backlog for the next Sprint."
+          }
+        ]
+      },
+      {
+        "text": ""
       }
     ]
   },
@@ -1180,6 +1460,40 @@
     "children": [
       {
         "text": "The moment a Product Backlog item meets the Definition of Done, an Increment is born."
+      },
+      {
+        "data": {
+          "openModal": true,
+          "slatenode": {
+            "hid": "#definitionOfDone"
+          }
+        },
+        "type": "Highlight",
+        "children": [
+          {
+            "text": ""
+          }
+        ]
+      },
+      {
+        "text": ""
+      },
+      {
+        "data": {
+          "openModal": true,
+          "slatenode": {
+            "hid": "definitionOfDone"
+          }
+        },
+        "type": "Highlight",
+        "children": [
+          {
+            "text": " "
+          }
+        ]
+      },
+      {
+        "text": ""
       }
     ]
   },
@@ -1195,7 +1509,24 @@
     "type": "paragraph",
     "children": [
       {
-        "text": "If the Definition of Done for an increment is part of the standards of the organization, all Scrum Teams must follow it as a minimum. If it is not an organizational standard, the Scrum Team must create a Definition of Done appropriate for the product."
+        "text": ""
+      },
+      {
+        "data": {
+          "openModal": true,
+          "slatenode": {
+            "hid": "definitionOfDone"
+          }
+        },
+        "type": "Highlight",
+        "children": [
+          {
+            "text": "If the Definition of Done for an increment is part of the standards of the organization, all Scrum Teams must follow it as a minimum. If it is not an organizational standard, the Scrum Team must create a Definition of Done appropriate for the product."
+          }
+        ]
+      },
+      {
+        "text": ""
       }
     ]
   },

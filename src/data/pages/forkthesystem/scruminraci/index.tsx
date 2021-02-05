@@ -15,19 +15,31 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import { Page } from '@bodiless/gatsby-theme-bodiless';
+import { addClasses, Div, withDesign } from '@bodiless/fclasses';
+import { withNodeKey } from '@bodiless/core';
+import { flow } from 'lodash';
 import Layout from '../../../../components/Layout';
 import { FlowContainerDefault } from '../../../../components/FlowContainer';
-import { addClasses, withDesign } from '@bodiless/fclasses';
 
-const FCD = withDesign({ Wrapper: addClasses('lg:w-1/2 lg:m-0') })(FlowContainerDefault);
-const FCDG = withDesign({ Wrapper: addClasses('lg:max-h-v overflow-scroll') })(FCD);
+const FCP = flow(
+  withDesign({
+    Wrapper: addClasses('lg:w-1/2 lg:m-0'),
+  }),
+  withNodeKey('page'),
+)(FlowContainerDefault);
+const FCD = flow(
+  withDesign({
+    Wrapper: addClasses('lg:w-1/2 lg:m-0 lg:h-screen overflow-scroll'),
+  }),
+  withNodeKey('guild'),
+)(FlowContainerDefault);
 export default props => (
   <Page {...props}>
     <Layout>
-      <div className="flex flex-wrap">
-        <FCD nodeKey="page" />
-        <FCDG nodeKey="guild" />
-      </div>
+      <Div className="flex flex-wrap">
+        <FCP />
+        <FCD />
+      </Div>
     </Layout>
   </Page>
 );

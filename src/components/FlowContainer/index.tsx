@@ -25,9 +25,8 @@ import withAudioVariations from './withAudioVariations';
 import { replaceWith, withDesign } from '@bodiless/fclasses';
 import { withType } from './Categories';
 import Tex from '../Tex';
-import List from '../List'
-import { RACI1 } from '../Tables';
-import ScrumGuild from '../ScrumGuild';
+import List from '../List';
+import { RACI1 } from '../RACI';
 import CommonWords from '../CommonWords';
 
 

@@ -6,6 +6,13 @@
         "className": "w-full"
       },
       "type": "EditorFullFeatured"
+    },
+    {
+      "uuid": "f034b070-6733-11eb-8edf-a7312d064853",
+      "wrapperProps": {
+        "className": "w-full"
+      },
+      "type": "EditorFullFeatured"
     }
   ]
 }

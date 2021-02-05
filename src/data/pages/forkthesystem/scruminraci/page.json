@@ -3,7 +3,7 @@
     {
       "uuid": "12f69df0-6250-11eb-bf68-a3bafb02bf40",
       "wrapperProps": {
-        "className": "w-full"
+        "className": "w-full lg:w-full"
       },
       "type": "EditorFullFeatured"
     },

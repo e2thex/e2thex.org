@@ -286,10 +286,6 @@ module.exports = mergeWithBodilessConfigs({
     |
     */
 
-    height: {
-      10: '10rems',
-    },
-
     /*
     |---------------------------------------------------------------------------
     | Minimum width                      https://tailwindcss.com/docs/min-width

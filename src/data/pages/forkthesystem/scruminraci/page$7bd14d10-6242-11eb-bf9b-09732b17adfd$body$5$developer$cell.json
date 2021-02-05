@@ -1,0 +1,27 @@
+[
+  {
+    "type": "AlignCenter",
+    "children": [
+      {
+        "text": ""
+      },
+      {
+        "data": {
+          "openModal": true,
+          "slatenode": {
+            "href": "#developerAccountablity"
+          }
+        },
+        "type": "Link",
+        "children": [
+          {
+            "text": "A"
+          }
+        ]
+      },
+      {
+        "text": ""
+      }
+    ]
+  }
+]

@@ -1,26 +1,96 @@
 [
   {
-    "type": "paragraph",
+    "type": "H1",
     "children": [
       {
-        "text": "Test a "
+        "text": ""
       },
       {
         "data": {
           "openModal": true,
           "slatenode": {
-            "href": "#test"
+            "href": "#testatest"
           }
         },
         "type": "Link",
         "children": [
           {
-            "text": "link"
+            "text": ""
           }
         ]
       },
       {
-        "text": ""
+        "text": "Scrum in a RACI Matrix"
+      }
+    ]
+  },
+  {
+    "type": "paragraph",
+    "children": [
+      {
+        "text": "A few colleges ("
+      },
+      {
+        "data": {
+          "openModal": true,
+          "slatenode": {
+            "href": "https://bioshazard.medium.com/"
+          }
+        },
+        "type": "Link",
+        "children": [
+          {
+            "text": "Joe Still"
+          }
+        ]
+      },
+      {
+        "text": ", "
+      },
+      {
+        "data": {
+          "openModal": true
+        },
+        "type": "Link",
+        "children": [
+          {
+            "text": "LB"
+          }
+        ]
+      },
+      {
+        "text": ") and I worked to score the "
+      },
+      {
+        "data": {
+          "openModal": true,
+          "slatenode": {
+            "href": "https://www.scrumguides.org/scrum-guide.html"
+          }
+        },
+        "type": "Link",
+        "children": [
+          {
+            "text": "Scrum Guild"
+          }
+        ]
+      },
+      {
+        "text": " and extract a "
+      },
+      {
+        "data": {
+          "openModal": true
+        },
+        "type": "Link",
+        "children": [
+          {
+            "text": "RACI Matrix"
+          }
+        ]
+      },
+      {
+        "text": " from it.  Clicking on the table will highlight the appropriate part of the Scrum Guild."
       }
     ]
   }
