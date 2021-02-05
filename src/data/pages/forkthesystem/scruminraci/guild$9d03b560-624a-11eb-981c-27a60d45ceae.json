@@ -3,11 +3,28 @@
     "type": "H2",
     "children": [
       {
-        "text": "The 2020 Scrum Guide"
+        "text": ""
       },
       {
-        "text": "TM",
-        "SuperScript": true
+        "data": {
+          "openModal": true,
+          "slatenode": {
+            "href": "https://www.scrumguides.org/scrum-guide.html"
+          }
+        },
+        "type": "Link",
+        "children": [
+          {
+            "text": "The 2020 Scrum Guide"
+          },
+          {
+            "text": "TM",
+            "SuperScript": true
+          }
+        ]
+      },
+      {
+        "text": ""
       }
     ]
   },

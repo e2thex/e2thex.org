@@ -23,7 +23,7 @@ import { FlowContainerDefault } from '../../../../components/FlowContainer';
 
 const FCP = flow(
   withDesign({
-    Wrapper: addClasses('lg:w-1/2 lg:m-0'),
+    Wrapper: addClasses('lg:w-1/2 lg:m-0 justify-start flex-col'),
   }),
   withNodeKey('page'),
 )(FlowContainerDefault);
@@ -36,7 +36,7 @@ const FCD = flow(
 export default props => (
   <Page {...props}>
     <Layout>
-      <Div className="flex flex-wrap">
+      <Div className="flex flex-wrap justify-start">
         <FCP />
         <FCD />
       </Div>
