@@ -32,18 +32,13 @@ type BRowProps = StylableProps & {
 };
 type BCellProps = StylableProps & BRowProps & { column:string, columnIndex:number };
 const DefaultRow = withoutProps('row', 'section', 'rowIndex')(Tr);
-// const DefaultCell = (props:BCellProps) => {
-//  const { section } = props;
- //  const Cell = withoutProps(['row', 'column', 'section', 'rowIndex', 'columnIndex'])(
-    // section === Section.head ? Th : Td,
-  // );
-  // return <Cell {...props} />;
-const CellA = (props:BCellProps) => {
+const HeadCell = withoutProps(['row', 'column', 'section', 'rowIndex', 'columnIndex'])(Th);
+const BodyCell = withoutProps(['row', 'column', 'section', 'rowIndex', 'columnIndex'])(Td);
+const DefaultCell = (props:BCellProps) => {
   const { section } = props;
-  const Cell = section === Section.head ? Th : Td;
-  return <Cell {...props} />; 
- };
- const DefaultCell = withoutProps(['row', 'column', 'section', 'rowIndex', 'columnIndex'])(CellA);
+  const Cell = section === Section.head ? HeadCell : BodyCell;
+  return <Cell {...props} />;
+};
 // };
 type TableComponents = {
   Wrapper: ComponentType<StylableProps>,
@@ -161,12 +156,39 @@ const BTable:FunctionComponent<Props> = (props) => {
 };
 const CleanTable = designable(tablComponentsStart, 'Table')(BTable);
 
+type CellTransFormProps = {
+  passed: BCellProps,
+  hoc: HOC,
+  Component: ComponentType<BCellProps>, 
+  func:IfCellIs,
+}
+  class CellTransform extends React.Component<CellTransFormProps> {
+  fixedProps: BCellProps;
+
+  Component: ComponentType<BCellProps>;
+
+  constructor(props:CellTransFormProps) {
+    super(props);
+    const { hoc, func, Component, passed, ...rest } = props;
+    this.fixedProps = {...passed, ...rest};
+    this.Component = func(passed) ? hoc(Component) : Component;
+  }
+
+  render() {
+    const Component = this.Component as ComponentType<BCellProps>;
+    return <Component {...this.fixedProps} />;
+  }
+}
 type IfCellIs = (props:BCellProps) => boolean;
 const ifCellIs = (func:IfCellIs) => (hoc:HOC) => (
-  (Component:ComponentType<BCellProps>) => (props:BCellProps) => {
-    const C = func(props) ? hoc(Component) : Component;
-    return <C {...props} />;
-  });
+  (Component:ComponentType<BCellProps>) => (props:BCellProps) => (
+    <CellTransform
+      hoc={hoc}
+      func={func}
+      passed={props}
+      Component={Component}
+    />
+  ));
 const ifSectionIs = (sectionWanted:Section) => (
   ifCellIs(({ section }) => section === sectionWanted)
 );

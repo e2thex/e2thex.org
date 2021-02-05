@@ -21,11 +21,10 @@ const RACI1 = flow(
     Cell: flow(addClasses('min-w-1 py-1 px-5'), withEditorFullFeatured('cell', '')),
     THead: flow(addClasses('bg-gray-200')),
     Wrapper: addClasses('border border-gray-200'),
-    
   }),
-  // forCells(({ columnIndex, section }) => columnIndex % 2 === 1 && section === 'body')(addClasses('bg-gray-100')),
-  // forCells(({ column }) => column === 'task')(addClasses('w-1/2 text-left')),
-  // forCells(({ column }) => column !== 'task')(addClasses('w-1/6')),
+  forCells(({ columnIndex, section }) => columnIndex % 2 === 1 && section === 'body')(addClasses('bg-gray-100')),
+  forCells(({ column }) => column === 'task')(addClasses('w-1/2 text-left')),
+  forCells(({ column }) => column !== 'task')(addClasses('w-1/6')),
 )(CleanTable);
 export {
   RACI1,
