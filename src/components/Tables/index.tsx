@@ -159,10 +159,10 @@ const CleanTable = designable(tablComponentsStart, 'Table')(BTable);
 type CellTransFormProps = {
   passed: BCellProps,
   hoc: HOC,
-  Component: ComponentType<BCellProps>, 
+  Component: ComponentType<BCellProps>,
   func:IfCellIs,
-}
-  class CellTransform extends React.Component<CellTransFormProps> {
+};
+class CellTransform extends React.Component<CellTransFormProps> {
   fixedProps: BCellProps;
 
   Component: ComponentType<BCellProps>;
