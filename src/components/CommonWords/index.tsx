@@ -1,8 +1,9 @@
 import {
-  addClasses, Button, designable, DesignableComponentsProps, Div, Form as FForm, StylableProps, Table, Tbody, Textarea, Thead, withDesign,
+  stylable, addClasses, Button, designable, DesignableComponentsProps, Div, Form as FForm, StylableProps, Tbody, Textarea, Thead, withDesign,
 } from '@bodiless/fclasses';
 import { flow } from 'lodash';
 import React, { ComponentType, HTMLProps, FunctionComponent as FC, useContext, createContext, useState } from 'react';
+import { withContent, CleanTable, forCells } from '../Tables';
 import { Result, rssResultPromise, result, overrideResults } from './commonWord';
 
 export type CwComponents = {
@@ -12,8 +13,6 @@ export type CwComponents = {
   InputText: ComponentType<StylableProps>,
   Submit: ComponentType<StylableProps>,
   Results: ComponentType<StylableProps>,
-  Header: ComponentType<StylableProps>,
-  Data: ComponentType<StylableProps>,
 };
 const cwComponentStart:CwComponents = {
   Wrapper: Div,
@@ -21,9 +20,7 @@ const cwComponentStart:CwComponents = {
   Input: Textarea,
   InputText: Textarea,
   Submit: Button,
-  Results: Table,
-  Header: Thead,
-  Data: Tbody,
+  Results: stylable(CleanTable),
 };
 
 type Props = DesignableComponentsProps<CwComponents> & HTMLProps<HTMLElement>;
@@ -36,8 +33,6 @@ const CwBase: FC<Props> = ({ components, ...rest }) => {
     InputText,
     Submit,
     Results,
-    Header,
-    Data,
   } = components;
 
   return (
@@ -47,19 +42,7 @@ const CwBase: FC<Props> = ({ components, ...rest }) => {
         <InputText />
         <Submit>Process</Submit>
       </Form>
-      <Results>
-        <Header>
-          <tr>
-            <th>Feed</th>
-            <th>Cheap</th>
-            <th>Expensive</th>
-            <th>Total Words</th>
-            <th>Cost per word</th>
-            <th>FK Grade Level</th>
-          </tr>
-        </Header>
-        <Data />
-      </Results>
+      <Results />
     </Wrapper>
   );
 };
@@ -131,6 +114,7 @@ const withSubmit = (C) => (props) => {
 };
 const Row = (props) => {
   const { title, cheap, expensive, total, fk } = props;
+
   return (
     <tr>
       <th className="text-left">{title}</th>
@@ -144,12 +128,24 @@ const Row = (props) => {
 }
 const asData = (C) => (props) => {
   const data = useContext(ResultsContext);
-  console.log(data);
-  return (
-    <C {...props}>
-      {data.map(d => <Row key={d.title} {...d} />)}
-    </C>
-  );
+  const head = [[
+    'Feed',
+    'Cheap',
+    'Expensive',
+    'Total Words',
+    'Cost per word',
+    'FK Grade Level',
+  ]];
+  const body = data.map(d => [
+    d.title,
+    d.cheap.toLocaleString(undefined, { style: 'percent', minimumFractionDigits: 2 }),
+    d.expensive.toLocaleString(undefined, { style: 'percent', minimumFractionDigits: 2 }),
+    d.total.toString(),
+    (d.expensive * 5 + d.cheap * 0.5).toLocaleString(undefined, { minimumFractionDigits: 2, style: 'currency', currency: 'USD' }).toString(),
+    d.fk.toString(),
+  ]);
+  const Component = withContent({ body, head })(C);
+  return <Component {...props} />;
 };
 
 const CommonWords = withDesign({
@@ -157,7 +153,14 @@ const CommonWords = withDesign({
   InputText: flow(asTextAreaText, addClasses('w-full rounded border h-10')),
   Submit: flow(withSubmit, addClasses('w-full border hover:by-gray-300 bg-gray-100 rounded b-1')),
   Wrapper: asWrapper,
-  Data: asData,
-  Results: addClasses('w-full border'),
+  Results: flow(
+    asData,
+    withDesign({
+      Wrapper: addClasses('w-full border'),
+      THead: flow(addClasses('bg-gray-200')),
+      Cell: addClasses('text-center'),
+    }),
+    forCells(({ columnIndex, section }) => columnIndex % 2 === 1 && section === 'body')(addClasses('bg-gray-100')),
+  ),
 })(CwClean);
 export default CommonWords;

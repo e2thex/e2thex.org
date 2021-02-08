@@ -47,5 +47,5 @@ const options = {
   renderForm,
   defaultData: { hid: 'test' },
 };
-const Highlight = asBodilessComponent(options)()((withNodeKey('high')(withNode(HighlightDisplay))));
+const Highlight = asBodilessComponent(options)('high')(HighlightDisplay);
 export default Highlight;

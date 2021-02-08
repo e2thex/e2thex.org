@@ -4,6 +4,7 @@ import fleschKincaidA from 'flesch-kincaid';
 import getWords from 'get-words';
 import { extract as getSentences } from 'sentence-extractor';
 import c5000 from './5000.json';
+import { Title } from '@bodiless/fclasses';
 
 const words = (text:string) => getWords(text) as string[];
 const sentences = (text:string) => text.split(/[?!.]\s/) as string[];
@@ -67,7 +68,7 @@ const rssResultPromise:RssResultPromise = (url) => new Promise((resolve, reject)
   const processUrl = (u: string) => `${CORS_PROXY}${u}`;
   parser.parseURL(processUrl(url), (err, feed) => {
     if (err) {
-      reject(err);
+      resolve(result('', err.name, url));
       return;
     }
     let data = '';
