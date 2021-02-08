@@ -26,12 +26,13 @@ import { replaceWith, withDesign } from '@bodiless/fclasses';
 import { withType } from './Categories';
 import Tex from '../Tex';
 import List from '../List';
-import { RACI1 } from '../RACI';
+import { RACI1, StandardTable } from '../RACI';
 import CommonWords from '../CommonWords';
 
 
 const withTables = withDesign({
   RACI1: flow(withTitle('RACI1'), withType('Custom')(replaceWith(RACI1))),
+  StandardTable: flow(withTitle('Table'), withType('RichText')(replaceWith(StandardTable))),
   CommonWords: flow(withTitle('CommonWords'), withType('Custom')(replaceWith(CommonWords))),
 });
 // Order of includes currently dictates order in Component Picker

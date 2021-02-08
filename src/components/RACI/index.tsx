@@ -1,5 +1,5 @@
-import { withDesign, addClasses } from '@bodiless/fclasses';
-import { flow } from 'lodash';
+import { withDesign, addClasses, HOC } from '@bodiless/fclasses';
+import { flow, identity } from 'lodash';
 import { withEditorFullFeatured } from '../Editors';
 import { asEditableLink } from '../Elements.token';
 import {
@@ -7,23 +7,37 @@ import {
   forCells,
   CleanTable,
 } from '../Tables';
-
-const RACI1 = flow(
-  asBodilessTable(undefined, {
-    columns: ['task', 'developer', 'po', 'sm'],
-    rows: (new Array(10)).fill('').map((t, i) => i.toString()),
-    headRows: ['0'],
-    footRows: [],
-  }),
+const asEditableTable = flow(
+  asBodilessTable(),
   withDesign({
-    Cell: flow(addClasses('min-w-1 py-1 px-5'), withEditorFullFeatured('cell', '')),
+    Cell: withEditorFullFeatured('cell', ''),
+  }),
+);
+const asDefaultTableStyle = flow(
+  forCells(({ columnIndex, section }) => columnIndex % 2 === 1 && section === 'body')(addClasses('bg-gray-100')),
+  withDesign({
+    Cell: flow(addClasses('min-w-1 py-1 px-5')),
     THead: flow(addClasses('bg-gray-200')),
     Wrapper: addClasses('border border-gray-200'),
   }),
-  forCells(({ columnIndex, section }) => columnIndex % 2 === 1 && section === 'body')(addClasses('bg-gray-100')),
-  forCells(({ columnIndex }) => columnIndex === 1)(addClasses('w-1/2 text-left')),
-  forCells(({ column }) => column !== 'task')(addClasses('w-1/6')),
+);
+const firstColumnHalf = flow(
+  forCells(({ columnIndex }) => columnIndex === 0)(addClasses('w-1/2 text-left')),
+  withDesign({
+
+  }),
+);
+const RACI1 = flow(
+  asEditableTable,
+  asDefaultTableStyle,
+  firstColumnHalf,
+  forCells(({ columnIndex }) => columnIndex !== 0)(addClasses('w-1/6 text-center')),
+)(CleanTable);
+const StandardTable = flow(
+  asEditableTable,
+  asDefaultTableStyle,
 )(CleanTable);
 export {
   RACI1,
+  StandardTable,
 };
