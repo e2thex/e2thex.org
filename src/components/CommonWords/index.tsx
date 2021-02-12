@@ -157,7 +157,7 @@ const CommonWords = withDesign({
     asData,
     withDesign({
       Wrapper: addClasses('w-full border'),
-      THead: flow(addClasses('bg-gray-200')),
+      THead: flow(addClasses('bg-orange-700 text-white')),
       Cell: addClasses('text-center'),
     }),
     forCells(({ columnIndex, section }) => columnIndex % 2 === 1 && section === 'body')(addClasses('bg-gray-100')),
