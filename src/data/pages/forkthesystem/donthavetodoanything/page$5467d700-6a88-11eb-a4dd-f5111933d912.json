@@ -34,7 +34,22 @@
     "type": "paragraph",
     "children": [
       {
-        "text": "This language has three effects"
+        "text": "So I want to propose that if we "
+      },
+      {
+        "text": "do not",
+        "Bold": true
+      },
+      {
+        "text": " have to do anything then we should stop saying that we have to do things.  I want to offer a two-step process to move away from \"have to\""
+      }
+    ]
+  },
+  {
+    "type": "H2",
+    "children": [
+      {
+        "text": "Example to Start With"
       }
     ]
   },
@@ -42,7 +57,7 @@
     "type": "paragraph",
     "children": [
       {
-        "text": ""
+        "text": "Let's start with a few examples where one might use \"have to\" language:"
       }
     ]
   }

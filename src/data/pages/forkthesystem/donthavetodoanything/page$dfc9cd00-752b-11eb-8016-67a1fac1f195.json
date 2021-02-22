@@ -3,21 +3,32 @@
     "type": "paragraph",
     "children": [
       {
-        "text": "They have language give no person to disagree with, there is no path to object there is only a fixed future.  Mike Crittenden says "
+        "text": "This now gives the person you are talking to context about the choices you are making.  It also opens the door for you to be "
       },
       {
         "data": {
-          "openModal": true
+          "openModal": true,
+          "slatenode": {
+            "href": "https://critter.blog/2021/02/09/say-things-that-can-be-wrong/"
+          }
         },
         "type": "Link",
         "children": [
           {
-            "text": "\"Say things that can be wrong\""
+            "text": "wrong"
           }
         ]
       },
       {
-        "text": ". "
+        "text": ".  It gives them the chance to say I hear that is important please hear me out on my want. Or to disagree with your assessment of the situation. In short, it gives them information and an invitation to engage."
+      }
+    ]
+  },
+  {
+    "type": "H2",
+    "children": [
+      {
+        "text": "Conclusion"
       }
     ]
   },
@@ -25,7 +36,31 @@
     "type": "paragraph",
     "children": [
       {
-        "text": "\nWhen one says they \"have to\" do something, they are choosing to remove themselves from the decision tree. They are literally giving up power over their actions.\nThis is even worse when one tells someone else they \"have to\" do something, this is the passive voice of responsibility.  It Removes the source of choice is being made and instead frames it as something that is happening to them, the ether is forcing you to act. This not only removes their agency but denies them a path to advocate for themselves.  It not only makes it so that they can not choose but denies that anyone has made the choice.\nAs an example, when a Project lead says we have to have all of this work done by Monday AM. \n\nI often hear I had to work late all week or, even worse I had to have the team, work late all week.  This is the passive voice of responsibility.  These are choices, they might be the consequences of other bad choices already made. You might be faced with only bad choices, but they are choices all the same.\n When we treat them as our hands being forced a few things happen.\n1. We give up agency. We say it has been taken, but in fact, we are choosing to be powerless.2. We remove the benefactor of the effort.  In general, people like to do things for other people when we play the have to game, we are choosing to make people do extraordinary work, for the benefit of the way things are.3. We remove cost-benefit analysis.  If we say it has to be done, we are stating that "
+        "text": "In step one, you empowered yourself by establishing that your actions are yours, in step two you empower others by giving them the opening to talk about why you might be wrong.  "
+      }
+    ]
+  },
+  {
+    "type": "paragraph",
+    "children": [
+      {
+        "text": ""
+      }
+    ]
+  },
+  {
+    "type": "paragraph",
+    "children": [
+      {
+        "text": "Using \"have to\" might feel like a shortcut but in the end, it only shortcuts agency."
+      }
+    ]
+  },
+  {
+    "type": "paragraph",
+    "children": [
+      {
+        "text": "\n"
       }
     ]
   }
