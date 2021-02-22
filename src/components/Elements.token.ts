@@ -33,6 +33,7 @@ import {
   asUnderline,
   asAlignJustify,
 } from './ElementDefault.token';
+import { WithNodeKeyProps } from '@bodiless/core';
 
 /* Page Structure */
 const asBlockItem = addClasses('p-1 w-full');
@@ -93,7 +94,17 @@ const asImageRounded = addClasses('rounded-t-lg');
 const asEditableLink = asBodilessLink;
 
 /* Edit component */
-const asEditable = asEditableCore;
+const asEditable = (nodeKeys?: WithNodeKeyProps, placeholder?: string) => asEditableCore(
+  nodeKeys,
+  placeholder,
+  // Overrides to add auto-superscript.
+  () => ({
+    sanitizer: (html: string) => html
+      .split('')
+      .map(c => ('©'.includes(c) ? `<sup>${c}</sup>` : c))
+      .join(''),
+  }),
+);
 
 // Tout Components
 const asCta = flow(addClasses('text-center p-2'), asPrimaryColorBackground, asPrimaryColorBackgroundOnHover, asTextColorPrimary);
