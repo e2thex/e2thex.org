@@ -59,7 +59,24 @@
         ]
       },
       {
-        "text": "Lauren Burroughs) and I worked to review the "
+        "text": ""
+      },
+      {
+        "data": {
+          "openModal": true,
+          "slatenode": {
+            "href": "https://labby.dev/"
+          }
+        },
+        "type": "Link",
+        "children": [
+          {
+            "text": "Lauren Burroughs"
+          }
+        ]
+      },
+      {
+        "text": ") and I worked to review the "
       },
       {
         "data": {
@@ -80,7 +97,10 @@
       },
       {
         "data": {
-          "openModal": true
+          "openModal": true,
+          "slatenode": {
+            "href": "https://en.wikipedia.org/wiki/Responsibility_assignment_matrix"
+          }
         },
         "type": "Link",
         "children": [
