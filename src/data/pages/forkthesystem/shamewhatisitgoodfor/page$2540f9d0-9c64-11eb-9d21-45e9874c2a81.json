@@ -1,0 +1,70 @@
+[
+  {
+    "type": "H1",
+    "children": [
+      {
+        "text": "Shame, What is it Good For? "
+      },
+      {
+        "text": "Absolutely Nothing!",
+        "Italic": true
+      }
+    ]
+  },
+  {
+    "type": "paragraph",
+    "children": [
+      {
+        "text": "When I first "
+      },
+      {
+        "data": {
+          "openModal": true
+        },
+        "type": "Link",
+        "children": [
+          {
+            "text": "read"
+          }
+        ]
+      },
+      {
+        "text": "/"
+      },
+      {
+        "data": {
+          "openModal": true,
+          "slatenode": {
+            "href": "https://www.youtube.com/watch?v=psN1DORYYV0"
+          }
+        },
+        "type": "Link",
+        "children": [
+          {
+            "text": "heard"
+          }
+        ]
+      },
+      {
+        "text": "  Brené Brown's distinction between "
+      },
+      {
+        "data": {
+          "openModal": true,
+          "slatenode": {
+            "href": "https://brenebrown.com/blog/2013/01/14/shame-v-guilt/"
+          }
+        },
+        "type": "Link",
+        "children": [
+          {
+            "text": "guilt and shame"
+          }
+        ]
+      },
+      {
+        "text": " it really resonated with me."
+      }
+    ]
+  }
+]

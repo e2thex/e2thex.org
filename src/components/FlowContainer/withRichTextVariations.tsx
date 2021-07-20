@@ -23,6 +23,7 @@ import {
   replaceWith,
   withDesign,
   addClasses,
+  remove,
 } from '@bodiless/fclasses';
 import { asPreview } from '@bodiless/richtext';
 
@@ -34,6 +35,7 @@ import {
 } from '../Editors';
 import { withType } from './Categories';
 import { QuoteClean } from '../Quote';
+import { Fragment } from 'react';
 
 const Quote = withDesign({
   Wrapper: addClasses('flex justify-between h-full flex-wrap flex-col m:w-3/4 mx-auto'),
@@ -46,6 +48,10 @@ const Quote = withDesign({
   ),
   Ending: addClasses('self-end text-6xl -mb-3'),
 })(QuoteClean);
+const Def = withDesign({
+  Starting: remove,
+  Ending: remove,
+})(Quote);
 const richTextVariation = {
   /*
   EditorSimple: flow(
@@ -75,6 +81,12 @@ const richTextVariation = {
     withType('Text')(),
     withTitle('Quote'),
     withDesc('Adds a quote\n'),
+  ),
+  Def: flow(
+    replaceWith(Def),
+    withType('Text')(),
+    withTitle('Definition'),
+    withDesc('Adds a Definition\n'),
   ),
 };
 
