@@ -10,21 +10,21 @@
     {
       "uuid": "5729b850-353a-11ec-b78d-11d8ddad2365",
       "wrapperProps": {
-        "className": "w-full lg:w-1/3"
+        "className": "w-full lg:w-full"
       },
       "type": "SquareImage"
     },
     {
       "uuid": "4dbf22f0-353a-11ec-b78d-11d8ddad2365",
       "wrapperProps": {
-        "className": "w-full lg:w-1/3"
+        "className": "w-full lg:w-full"
       },
       "type": "LandscapeImage"
     },
     {
       "uuid": "e0af4180-353a-11ec-b78d-11d8ddad2365",
       "wrapperProps": {
-        "className": "w-full lg:w-1/3"
+        "className": "w-full lg:w-full"
       },
       "type": "SquareImage"
     },
