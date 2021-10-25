@@ -1,0 +1,51 @@
+[
+  {
+    "type": "H1",
+    "children": [
+      {
+        "text": "RateThisFor.Me"
+      }
+    ]
+  },
+  {
+    "type": "H1",
+    "children": [
+      {
+        "text": ""
+      }
+    ]
+  },
+  {
+    "type": "paragraph",
+    "children": [
+      {
+        "text": ""
+      },
+      {
+        "data": {
+          "openModal": true,
+          "slatenode": {
+            "href": "https://ratethisfor.me"
+          }
+        },
+        "type": "Link",
+        "children": [
+          {
+            "text": "Ratethisfor.me"
+          }
+        ]
+      },
+      {
+        "text": " is a website that lets one quickly pass a URL to a group of people and have all of them submit their ratings.  It does not store the information and when everyone leaves the site the data vanish so it is good for gathering the info that is temporal.  It does allow for the data to be copied off the page."
+      }
+    ]
+  },
+  {
+    "type": "paragraph",
+    "children": [
+      {
+        "text": ""
+      }
+    ]
+  }
+]
