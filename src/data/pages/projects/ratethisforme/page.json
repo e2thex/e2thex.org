@@ -34,6 +34,13 @@
         "className": "w-full"
       },
       "type": "EditorFullFeatured"
+    },
+    {
+      "uuid": "f281cbe0-3593-11ec-8e01-8bcc63f5fb35",
+      "wrapperProps": {
+        "className": "w-full"
+      },
+      "type": "Centered"
     }
   ]
 }
