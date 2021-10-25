@@ -27,6 +27,13 @@
         "className": "w-full lg:w-1/3"
       },
       "type": "SquareImage"
+    },
+    {
+      "uuid": "d712c280-3541-11ec-8e01-8bcc63f5fb35",
+      "wrapperProps": {
+        "className": "w-full"
+      },
+      "type": "EditorFullFeatured"
     }
   ]
 }

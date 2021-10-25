@@ -1,0 +1,52 @@
+[
+  {
+    "type": "H2",
+    "children": [
+      {
+        "text": "Support"
+      }
+    ]
+  },
+  {
+    "type": "paragraph",
+    "children": [
+      {
+        "text": "If you would like to submit bugs or suggestions please do so on our "
+      },
+      {
+        "data": {
+          "openModal": true,
+          "slatenode": {
+            "href": "https://github.com/e2thex/ratethisfor.me/issues"
+          }
+        },
+        "type": "Link",
+        "children": [
+          {
+            "text": "gitbub page"
+          }
+        ]
+      },
+      {
+        "text": ".  If you would like to give finatual support you can "
+      },
+      {
+        "data": {
+          "openModal": true,
+          "slatenode": {
+            "href": "https://venmo.com/u/Erik-Summerfield"
+          }
+        },
+        "type": "Link",
+        "children": [
+          {
+            "text": "venmo me"
+          }
+        ]
+      },
+      {
+        "text": "."
+      }
+    ]
+  }
+]
