@@ -5,13 +5,18 @@
 <url> <loc>https://www.e2thex.org/music/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://www.e2thex.org/search/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://www.e2thex.org/music/forkthesystem/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://www.e2thex.org/forkthesystem/donthavetodoanything/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://www.e2thex.org/forkthesystem/howexpensiveareyourwords/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://www.e2thex.org/forkthesystem/greatideasareuncovered/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://www.e2thex.org/forkthesystem/iteratetogeneral/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://www.e2thex.org/forkthesystem/pleasedefineyouruniverse/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://www.e2thex.org/forkthesystem/scruminraci/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://www.e2thex.org/forkthesystem/scrumraci/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://www.e2thex.org/forkthesystem/shamewhatisitgoodfor/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://www.e2thex.org/forkthesystem/taskvsdelegate/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://www.e2thex.org/forkthesystem/whentoappealtoauthority/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://www.e2thex.org/forkthesystem/2021/01/theseusteams/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://www.e2thex.org/forkthesystem/2021/01/youknownothing/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://www.e2thex.org/forkthesystem/donthavetodoanything/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://www.e2thex.org/projects/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://www.e2thex.org/projects/ratethisforme/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 </urlset>
