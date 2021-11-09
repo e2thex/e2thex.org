@@ -1,0 +1,18 @@
+[
+  {
+    "type": "H1",
+    "children": [
+      {
+        "text": "Bodiless JS"
+      }
+    ]
+  },
+  {
+    "type": "paragraph",
+    "children": [
+      {
+        "text": "BodilessJS is a toolset for building editable websites in a JAMStack. I help develop it while working with the Johnson and Johnson team.  This site is current built using it."
+      }
+    ]
+  }
+]

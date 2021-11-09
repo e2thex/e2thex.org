@@ -1,0 +1,27 @@
+[
+  {
+    "type": "paragraph",
+    "children": [
+      {
+        "text": "The documentation is available at "
+      },
+      {
+        "data": {
+          "openModal": true,
+          "slatenode": {
+            "href": "https://johnsonandjohnson.github.io/Bodiless-JS/#/"
+          }
+        },
+        "type": "Link",
+        "children": [
+          {
+            "text": "https://johnsonandjohnson.github.io/Bodiless-JS/"
+          }
+        ]
+      },
+      {
+        "text": ""
+      }
+    ]
+  }
+]

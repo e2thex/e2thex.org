@@ -1,0 +1,27 @@
+[
+  {
+    "type": "paragraph",
+    "children": [
+      {
+        "text": "Decouples days presentation"
+      },
+      {
+        "data": {
+          "openModal": true,
+          "slatenode": {
+            "href": "https://www.youtube.com/watch?v=10R0ppnIGY4"
+          }
+        },
+        "type": "Link",
+        "children": [
+          {
+            "text": " Life after Drupal: Becoming Bodiless(JS)"
+          }
+        ]
+      },
+      {
+        "text": ""
+      }
+    ]
+  }
+]

@@ -13,6 +13,13 @@
         "className": "w-full"
       },
       "type": "ToutHorizontalHeaderPrimary"
+    },
+    {
+      "uuid": "6f3fdce0-4178-11ec-905d-59ea24d17f76",
+      "wrapperProps": {
+        "className": "w-full"
+      },
+      "type": "ToutHorizontalHeaderPrimary"
     }
   ]
 }

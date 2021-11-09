@@ -1,0 +1,44 @@
+[
+  {
+    "type": "paragraph",
+    "children": [
+      {
+        "text": "The code base is available at "
+      },
+      {
+        "data": {
+          "openModal": true,
+          "slatenode": {
+            "href": "https://github.com/johnsonandjohnson/Bodiless-JS/"
+          }
+        },
+        "type": "Link",
+        "children": [
+          {
+            "text": "https://github.com/johnsonandjohnson/Bodiless-JS/"
+          }
+        ]
+      },
+      {
+        "text": ""
+      },
+      {
+        "data": {
+          "openModal": true,
+          "slatenode": {
+            "href": "https://github.com/johnsonandjohnson/Bodiless-JS/"
+          }
+        },
+        "type": "Link",
+        "children": [
+          {
+            "text": ""
+          }
+        ]
+      },
+      {
+        "text": ""
+      }
+    ]
+  }
+]
