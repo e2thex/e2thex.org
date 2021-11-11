@@ -1,8 +1,14 @@
-import { asBodilessComponent, ifEditable, useMenuOptionUI, withNode, withNodeKey } from '@bodiless/core';
-import { addClasses, Span, withoutProps } from '@bodiless/fclasses';
-import { flow } from 'lodash';
-import React, { HTMLProps, Fragment, FunctionComponent, useState, useEffect } from 'react';
-const HighlightSpan = (p) => (<Span className="bg-yellow-500" {...p} />)
+/* eslint-disable jsx-a11y/anchor-is-valid */
+/* eslint-disable jsx-a11y/anchor-has-content */
+import { asBodilessComponent, ifEditable, useMenuOptionUI } from '@bodiless/core';
+import { addClasses, Span } from '@bodiless/fclasses';
+import React, {
+  HTMLProps,
+  FunctionComponent,
+  useState, useEffect,
+} from 'react';
+
+const HighlightSpan = <A extends Object> (p:A) => (<Span className="bg-yellow-500" {...p} />);
 type Props = {
   hid: string,
 } & HTMLProps<HTMLElement>;
@@ -25,8 +31,8 @@ const HighlightDisplay:FunctionComponent<Props> = (props) => {
         {children}
       </Wrapper>
     </>
-  )
-}
+  );
+};
 const renderForm = () => {
   const { ComponentFormTitle, ComponentFormText } = useMenuOptionUI();
   return (
@@ -47,7 +53,7 @@ const options = {
   renderForm,
   defaultData: { hid: 'test' },
 };
-//const editBG = ifEditable(addClasses('bg-grey-200'));
+// const editBG = ifEditable(addClasses('bg-grey-200'));
 const editBG = ifEditable(addClasses('bg-gray-200'));
 const Highlight = asBodilessComponent(options)('high')(editBG(HighlightDisplay));
 export default Highlight;

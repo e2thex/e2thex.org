@@ -1,10 +1,7 @@
-
 import AudioPlayer from 'react-h5-audio-player';
 import 'react-h5-audio-player/lib/styles.css';
 import { stylable } from '@bodiless/fclasses';
-import React, {
-  HTMLProps,
-} from 'react';
+import React from 'react';
 
 import {
   getUI,
@@ -13,13 +10,14 @@ import {
 } from '@bodiless/core';
 
 // @ts-ignore fails when it is imported by jest.
-import Placeholder from './placeholder.png';
 import { flow } from 'lodash';
 import DropZonePlugin from './DropZonePlugin';
 // Type of the props accepted by this component.
 // Exclude the src and alt from the props accepted as we write it.
 
-type Props = {}
+type Props = {
+  ui: any
+};
 // Type of the data used by this component.
 export type Data = {
   src: string;

@@ -1,4 +1,3 @@
-
 import React, {
   HTMLProps,
   useCallback,
@@ -9,7 +8,6 @@ import React, {
 import debug from 'debug';
 
 import {
-  getUI,
   useNode,
 } from '@bodiless/core';
 
@@ -17,8 +15,6 @@ import { useDropzone } from 'react-dropzone';
 import { FormApi } from 'informed';
 import BackendSave from './BackendSave';
 // @ts-ignore fails when it is imported by jest.
-import Placeholder from './placeholder.png';
-
 
 // Controls the time spent on file upload
 const MaxTimeout:number = 10000;
@@ -51,7 +47,9 @@ const defaultImagePickerUI = {
 };
 
 // DropZonePlugin control the upload of file and only saves jpg/png files.
-function DropZonePlugin({ formApi, targetFieldName, ui, acceptType }: {
+function DropZonePlugin({
+  formApi, targetFieldName, ui, acceptType,
+}: {
   formApi: FormApi<Data>;
   targetFieldName:string;
   ui?: Partial<TImagePickerUI>;
