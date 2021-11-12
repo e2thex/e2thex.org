@@ -10,23 +10,16 @@
     {
       "uuid": "ce4a6140-7a9c-11eb-9656-fdfd0400f16b",
       "wrapperProps": {
-        "className": "w-full lg:w-1/2"
+        "className": "w-full lg:w-1/3"
       },
-      "type": "ToutHorizontalHeaderPrimary"
+      "type": "ToutVertical"
     },
     {
       "uuid": "c9e30ec0-423a-11ec-b306-8b7c13a3d145",
       "wrapperProps": {
-        "className": "w-full lg:w-1/2"
+        "className": "w-full lg:w-1/3"
       },
-      "type": "ToutHorizontalHeaderPrimary"
-    },
-    {
-      "uuid": "bce57240-676a-11eb-8dab-95d07a6a072d",
-      "wrapperProps": {
-        "className": "w-full lg:w-2/3"
-      },
-      "type": "ToutHorizontal"
+      "type": "ToutVertical"
     },
     {
       "uuid": "d5a6be50-4d71-11eb-a4dc-ff5212da8b71",
@@ -38,30 +31,37 @@
     {
       "uuid": "96ed68e0-5509-11eb-abf7-9143d9da18c7",
       "wrapperProps": {
-        "className": "w-full lg:w-1/3"
+        "className": "w-full lg:w-1/2"
       },
-      "type": "ToutVertical"
+      "type": "ToutHorizontalHeaderPrimary"
+    },
+    {
+      "uuid": "b5f1f070-55dc-11eb-8858-4359c478a53c",
+      "wrapperProps": {
+        "className": "w-full lg:w-1/2"
+      },
+      "type": "ToutHorizontalHeaderPrimary"
     },
     {
       "uuid": "aee6cad0-6572-11eb-a7c0-c5c7dcb68009",
       "wrapperProps": {
-        "className": "w-full lg:w-2/3"
+        "className": "w-full lg:w-full"
+      },
+      "type": "ToutHorizontal"
+    },
+    {
+      "uuid": "bce57240-676a-11eb-8dab-95d07a6a072d",
+      "wrapperProps": {
+        "className": "w-full lg:w-1/2"
       },
       "type": "ToutHorizontal"
     },
     {
       "uuid": "ce91b3e0-5c26-11eb-9d8d-abc18dcb4108",
       "wrapperProps": {
-        "className": "w-full lg:w-2/3"
+        "className": "w-full lg:w-1/2"
       },
       "type": "ToutHorizontal"
-    },
-    {
-      "uuid": "b5f1f070-55dc-11eb-8858-4359c478a53c",
-      "wrapperProps": {
-        "className": "w-full lg:w-1/3"
-      },
-      "type": "ToutVertical"
     }
   ]
 }
