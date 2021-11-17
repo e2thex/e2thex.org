@@ -3,15 +3,7 @@
     "type": "paragraph",
     "children": [
       {
-        "text": "After we understood this we stopped talking past each other and started focusing on where we had disagreements."
-      }
-    ]
-  },
-  {
-    "type": "paragraph",
-    "children": [
-      {
-        "text": ""
+        "text": "After we understood this, we stopped talking past each other and focused on where we had disagreements.  And we found lots of work was Other work."
       }
     ]
   },
@@ -27,7 +19,24 @@
     "type": "paragraph",
     "children": [
       {
-        "text": "another example occurred when having a discussion about \"Not Scrum\".  Scrum is a popular well defined Agile framework.  It is so popular that it is often seen as Agile.  "
+        "text": "Another example occurred when discussing "
+      },
+      {
+        "data": {
+          "openModal": true,
+          "slatenode": {
+            "href": "https://bioshazard.medium.com/not-scrum-43c7da452483"
+          }
+        },
+        "type": "Link",
+        "children": [
+          {
+            "text": "\"Not Scrum"
+          }
+        ]
+      },
+      {
+        "text": ".\"  Scrum is a popular well defined Agile framework.  It is so popular that it is often seen as Agile.  "
       }
     ]
   },
@@ -43,7 +52,7 @@
     "type": "paragraph",
     "children": [
       {
-        "text": "So, when discussion things that are \"Not Scrum\" I keep hearing them as not agile I saw the work as:"
+        "text": "So, when discussing things that are \"Not Scrum,\" I keep hearing them as not agile I saw the work as:"
       }
     ]
   }

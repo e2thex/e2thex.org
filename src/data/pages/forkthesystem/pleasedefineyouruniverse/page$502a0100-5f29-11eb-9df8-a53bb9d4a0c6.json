@@ -11,69 +11,7 @@
     "type": "paragraph",
     "children": [
       {
-        "text": "I spend a lot of my day debating with colleges and I have started to see a pattern that can really help us understand each other. I label this Defining your Universe."
-      }
-    ]
-  },
-  {
-    "type": "paragraph",
-    "children": [
-      {
-        "text": "To start with I want to give a few examples of the anti-pattern.  "
-      }
-    ]
-  },
-  {
-    "type": "paragraph",
-    "children": [
-      {
-        "text": ""
-      }
-    ]
-  },
-  {
-    "type": "H2",
-    "children": [
-      {
-        "text": "Deep Work vs Shallow Work Example"
-      }
-    ]
-  },
-  {
-    "type": "paragraph",
-    "children": [
-      {
-        "text": "My book club has been reading "
-      },
-      {
-        "data": {
-          "openModal": true
-        },
-        "type": "Link",
-        "children": [
-          {
-            "text": "Deep Work"
-          }
-        ]
-      },
-      {
-        "text": " which defines two kinds of work early in the book, Deep Work and Shallow Work.  "
-      }
-    ]
-  },
-  {
-    "type": "paragraph",
-    "children": [
-      {
-        "text": ""
-      }
-    ]
-  },
-  {
-    "type": "paragraph",
-    "children": [
-      {
-        "text": "In our discussion, we keep going round and round in circles as we argued about what is Deep work and what is shallow work. Some of us saw Shallow Work as Not Deep work, some of us saw Deep Work as Not Shallow work, we all saw this world:"
+        "text": "I spend a lot of my day debating with colleges, and I have started to see a pattern that emerges in discussions. I call it the treadmill of scope."
       }
     ]
   }

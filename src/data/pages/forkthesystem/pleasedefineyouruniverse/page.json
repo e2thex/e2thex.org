@@ -8,6 +8,20 @@
       "type": "EditorFullFeatured"
     },
     {
+      "uuid": "462aa4a0-47e7-11ec-85e3-29befc7d5376",
+      "wrapperProps": {
+        "className": "w-full"
+      },
+      "type": "Def"
+    },
+    {
+      "uuid": "55d4f540-47e7-11ec-85e3-29befc7d5376",
+      "wrapperProps": {
+        "className": "w-full"
+      },
+      "type": "EditorFullFeatured"
+    },
+    {
       "uuid": "53a11470-5f2b-11eb-809f-2bd09cef3ba1",
       "wrapperProps": {
         "className": "w-full lg:w-full"
