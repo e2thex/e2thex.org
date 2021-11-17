@@ -10,7 +10,7 @@
     {
       "uuid": "53a11470-5f2b-11eb-809f-2bd09cef3ba1",
       "wrapperProps": {
-        "className": "w-full"
+        "className": "w-full lg:w-full"
       },
       "type": "LandscapeImage"
     },
@@ -34,6 +34,69 @@
         "className": "w-full lg:w-1/2"
       },
       "type": "Quote"
+    },
+    {
+      "uuid": "4bc847b0-461f-11ec-b1bf-4956749a17cf",
+      "wrapperProps": {
+        "className": "w-full"
+      },
+      "type": "EditorFullFeatured"
+    },
+    {
+      "uuid": "6ab836e0-4623-11ec-bfce-ade739b560a7",
+      "wrapperProps": {
+        "className": "w-full"
+      },
+      "type": "Tex"
+    },
+    {
+      "uuid": "8711a410-4624-11ec-bfce-ade739b560a7",
+      "wrapperProps": {
+        "className": "w-full"
+      },
+      "type": "EditorFullFeatured"
+    },
+    {
+      "uuid": "21bdcf90-4623-11ec-bfce-ade739b560a7",
+      "wrapperProps": {
+        "className": "w-full lg:w-full"
+      },
+      "type": "LandscapeImage"
+    },
+    {
+      "uuid": "49cc7ae0-4623-11ec-bfce-ade739b560a7",
+      "wrapperProps": {
+        "className": "w-full"
+      },
+      "type": "EditorFullFeatured"
+    },
+    {
+      "uuid": "8f6ad730-4629-11ec-bfce-ade739b560a7",
+      "wrapperProps": {
+        "className": "w-full"
+      },
+      "type": "SquareImage"
+    },
+    {
+      "uuid": "9cc1c1f0-4629-11ec-bfce-ade739b560a7",
+      "wrapperProps": {
+        "className": "w-full"
+      },
+      "type": "EditorFullFeatured"
+    },
+    {
+      "uuid": "9fff39b0-4629-11ec-bfce-ade739b560a7",
+      "wrapperProps": {
+        "className": "w-full"
+      },
+      "type": "SquareImage"
+    },
+    {
+      "uuid": "8251dfd0-4629-11ec-bfce-ade739b560a7",
+      "wrapperProps": {
+        "className": "w-full"
+      },
+      "type": "EditorFullFeatured"
     }
   ]
 }

@@ -19,7 +19,7 @@
     "type": "paragraph",
     "children": [
       {
-        "text": ""
+        "text": "To start with I want to give a few examples of the anti-pattern.  "
       }
     ]
   },
@@ -27,7 +27,23 @@
     "type": "paragraph",
     "children": [
       {
-        "text": "To start with I want to give an example of the anti pattern.  My book club has been reading "
+        "text": ""
+      }
+    ]
+  },
+  {
+    "type": "H2",
+    "children": [
+      {
+        "text": "Deep Work vs Shallow Work Example"
+      }
+    ]
+  },
+  {
+    "type": "paragraph",
+    "children": [
+      {
+        "text": "My book club has been reading "
       },
       {
         "data": {
