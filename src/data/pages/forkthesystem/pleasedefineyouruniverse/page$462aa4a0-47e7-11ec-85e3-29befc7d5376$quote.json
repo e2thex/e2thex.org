@@ -3,11 +3,28 @@
     "type": "paragraph",
     "children": [
       {
-        "text": "The treadmill of Scope",
+        "text": "Assumption of a Dichotomy",
         "Bold": true
       },
       {
-        "text": ": When a discussion gets stuck talking about the nature of what is being discussed instead of the topic itself."
+        "text": ": The Tendency of people to assume that if someone disagrees with a point they must agree with the opposite of the point, often production a "
+      },
+      {
+        "data": {
+          "openModal": true,
+          "slatenode": {
+            "href": "https://en.wikipedia.org/wiki/Universe_(mathematics)"
+          }
+        },
+        "type": "Link",
+        "children": [
+          {
+            "text": "false dichotomy"
+          }
+        ]
+      },
+      {
+        "text": ""
       }
     ]
   }

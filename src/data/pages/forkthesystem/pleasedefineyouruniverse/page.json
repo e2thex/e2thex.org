@@ -22,6 +22,55 @@
       "type": "EditorFullFeatured"
     },
     {
+      "uuid": "21eec050-47f4-11ec-85e3-29befc7d5376",
+      "wrapperProps": {
+        "className": "w-full"
+      },
+      "type": "List"
+    },
+    {
+      "uuid": "287e9760-47f4-11ec-85e3-29befc7d5376",
+      "wrapperProps": {
+        "className": "w-full"
+      },
+      "type": "EditorFullFeatured"
+    },
+    {
+      "uuid": "6293e7f0-47f6-11ec-85e3-29befc7d5376",
+      "wrapperProps": {
+        "className": "w-full lg:w-full"
+      },
+      "type": "SquareImage"
+    },
+    {
+      "uuid": "73c7d4a0-488c-11ec-aafa-fd2d277f33ae",
+      "wrapperProps": {
+        "className": "w-full lg:w-full"
+      },
+      "type": "SquareImage"
+    },
+    {
+      "uuid": "598ca840-47f6-11ec-85e3-29befc7d5376",
+      "wrapperProps": {
+        "className": "w-full"
+      },
+      "type": "EditorFullFeatured"
+    },
+    {
+      "uuid": "985866e0-47f6-11ec-85e3-29befc7d5376",
+      "wrapperProps": {
+        "className": "w-full"
+      },
+      "type": "SquareImage"
+    },
+    {
+      "uuid": "8f7b4470-47f6-11ec-85e3-29befc7d5376",
+      "wrapperProps": {
+        "className": "w-full"
+      },
+      "type": "EditorFullFeatured"
+    },
+    {
       "uuid": "53a11470-5f2b-11eb-809f-2bd09cef3ba1",
       "wrapperProps": {
         "className": "w-full lg:w-full"
@@ -111,6 +160,13 @@
         "className": "w-full"
       },
       "type": "EditorFullFeatured"
+    },
+    {
+      "uuid": "398c9b40-6cd6-11ec-a3b9-7b98071e6c72",
+      "wrapperProps": {
+        "className": "w-full"
+      },
+      "type": "List"
     }
   ]
 }
