@@ -52,7 +52,24 @@
     "type": "paragraph",
     "children": [
       {
-        "text": "So, when discussing things that are \"Not Scrum,\" I keep hearing them as not agile I saw the work as:"
+        "text": "So, when discussing things that are \""
+      },
+      {
+        "data": {
+          "openModal": true,
+          "slatenode": {
+            "href": "https://bioshazard.medium.com/not-scrum-43c7da452483"
+          }
+        },
+        "type": "Link",
+        "children": [
+          {
+            "text": "Not Scrum"
+          }
+        ]
+      },
+      {
+        "text": ",\" I keep hearing them as not agile I saw the work as:"
       }
     ]
   }
