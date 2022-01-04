@@ -8,6 +8,13 @@
       "type": "EditorFullFeatured"
     },
     {
+      "uuid": "36295fe0-6d82-11ec-ae63-8bda4ff5acd8",
+      "wrapperProps": {
+        "className": "w-full"
+      },
+      "type": "ToutHorizontalHeaderPrimary"
+    },
+    {
       "uuid": "c0cb9190-3538-11ec-b4cb-23d95b4a7f66",
       "wrapperProps": {
         "className": "w-full"

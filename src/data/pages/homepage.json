@@ -10,16 +10,23 @@
     {
       "uuid": "2d2380b0-4943-11eb-abd2-114680d64047",
       "wrapperProps": {
-        "className": "w-full lg:w-1/2"
+        "className": "w-full lg:w-1/3"
       },
-      "type": "ToutHorizontalHeaderPrimary"
+      "type": "ToutVerticalHeaderPrimary"
     },
     {
       "uuid": "f26c7c70-4941-11eb-abd2-114680d64047",
       "wrapperProps": {
-        "className": "w-full lg:w-1/2"
+        "className": "w-full lg:w-1/3"
       },
-      "type": "ToutHorizontalHeaderPrimary"
+      "type": "ToutVerticalHeaderPrimary"
+    },
+    {
+      "uuid": "fddceba0-6d83-11ec-9efa-4d1438390156",
+      "wrapperProps": {
+        "className": "w-full lg:w-1/3"
+      },
+      "type": "ToutVerticalHeaderPrimary"
     }
   ]
 }

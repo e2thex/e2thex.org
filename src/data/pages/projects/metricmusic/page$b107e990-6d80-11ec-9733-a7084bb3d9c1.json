@@ -1,0 +1,26 @@
+[
+  {
+    "type": "paragraph",
+    "children": [
+      {
+        "text": "The app is available at MetricMusic.app.\n"
+      }
+    ]
+  },
+  {
+    "type": "H2",
+    "children": [
+      {
+        "text": "Support"
+      }
+    ]
+  },
+  {
+    "type": "paragraph",
+    "children": [
+      {
+        "text": "If you would like to submit bugs or suggestions, please do so on our Github page.    If you would like to give financial support, you can Venmo me."
+      }
+    ]
+  }
+]
