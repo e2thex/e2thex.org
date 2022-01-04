@@ -1,0 +1,76 @@
+[
+  {
+    "type": "paragraph",
+    "children": [
+      {
+        "text": "After we understood this, we stopped talking past each other and focused on where we had disagreements.  And we found lots of work was Other work."
+      }
+    ]
+  },
+  {
+    "type": "H2",
+    "children": [
+      {
+        "text": "Real-World Example: Not Scrum"
+      }
+    ]
+  },
+  {
+    "type": "paragraph",
+    "children": [
+      {
+        "text": "Another example occurred when discussing "
+      },
+      {
+        "data": {
+          "openModal": true,
+          "slatenode": {
+            "href": "https://bioshazard.medium.com/not-scrum-43c7da452483"
+          }
+        },
+        "type": "Link",
+        "children": [
+          {
+            "text": "\"Not Scrum"
+          }
+        ]
+      },
+      {
+        "text": ".\"  Scrum is a popular well defined Agile framework.  It is so popular that it is often seen as Agile.  "
+      }
+    ]
+  },
+  {
+    "type": "paragraph",
+    "children": [
+      {
+        "text": ""
+      }
+    ]
+  },
+  {
+    "type": "paragraph",
+    "children": [
+      {
+        "text": "So, when discussing things that are \""
+      },
+      {
+        "data": {
+          "openModal": true,
+          "slatenode": {
+            "href": "https://bioshazard.medium.com/not-scrum-43c7da452483"
+          }
+        },
+        "type": "Link",
+        "children": [
+          {
+            "text": "Not Scrum"
+          }
+        ]
+      },
+      {
+        "text": ",\" I keep hearing them as not agile I saw the work as:"
+      }
+    ]
+  }
+]
