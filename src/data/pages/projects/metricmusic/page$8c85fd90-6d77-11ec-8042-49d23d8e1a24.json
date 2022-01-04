@@ -1,0 +1,102 @@
+[
+  {
+    "type": "H1",
+    "children": [
+      {
+        "text": "Metric Music"
+      }
+    ]
+  },
+  {
+    "type": "paragraph",
+    "children": [
+      {
+        "text": "The octave is split into 12 notes equally spaced using "
+      },
+      {
+        "data": {
+          "openModal": true,
+          "slatenode": {
+            "href": "https://en.wikipedia.org/wiki/Equal_temperament"
+          }
+        },
+        "type": "Link",
+        "children": [
+          {
+            "text": "equal temperament"
+          }
+        ]
+      },
+      {
+        "text": " in most music systems. We see this Western Music Theory,  "
+      },
+      {
+        "data": {
+          "openModal": true,
+          "slatenode": {
+            "href": "https://en.wikipedia.org/wiki/Equal_temperament"
+          }
+        },
+        "type": "Link",
+        "children": [
+          {
+            "text": "Chinese musicology"
+          }
+        ]
+      },
+      {
+        "text": ", and "
+      },
+      {
+        "data": {
+          "openModal": true,
+          "slatenode": {
+            "href": "https://en.wikipedia.org/wiki/Indian_classical_music#Notation_system"
+          }
+        },
+        "type": "Link",
+        "children": [
+          {
+            "text": "Indian classical music"
+          }
+        ]
+      },
+      {
+        "text": ". There is a form of this in "
+      },
+      {
+        "data": {
+          "openModal": true,
+          "slatenode": {
+            "href": "https://en.wikipedia.org/wiki/Arabic_maqam#Intonation"
+          }
+        },
+        "type": "Link",
+        "children": [
+          {
+            "text": "Arabic Maqam"
+          }
+        ]
+      },
+      {
+        "text": " where the octave is divided one more time, giving us 24 notes. It turns out that dividing the octave into 12 allows for some potent harmonies to be approximated, so it makes sense that this pattern emerged in multiple locations.   But what would it sound like if, instead of one dividing the octave in different ways?     Well, that is what the Metric Music app allows!."
+      }
+    ]
+  },
+  {
+    "type": "paragraph",
+    "children": [
+      {
+        "text": ""
+      }
+    ]
+  },
+  {
+    "type": "paragraph",
+    "children": [
+      {
+        "text": ""
+      }
+    ]
+  }
+]
