@@ -1,0 +1,24 @@
+[
+  {
+    "type": "paragraph",
+    "children": [
+      {
+        "text": "Ratethisfor.me is a simple web app that allows a group to quickly do a "
+      },
+      {
+        "data": {
+          "openModal": true
+        },
+        "type": "Link",
+        "children": [
+          {
+            "text": "BOAT estimate"
+          }
+        ]
+      },
+      {
+        "text": "."
+      }
+    ]
+  }
+]

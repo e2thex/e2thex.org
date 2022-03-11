@@ -1,0 +1,35 @@
+[
+  {
+    "type": "H2",
+    "children": [
+      {
+        "text": "Development"
+      }
+    ]
+  },
+  {
+    "type": "paragraph",
+    "children": [
+      {
+        "text": "This project is open source and the code is available on "
+      },
+      {
+        "data": {
+          "openModal": true,
+          "slatenode": {
+            "href": "https://github.com/e2thex/estimatethisfor.me"
+          }
+        },
+        "type": "Link",
+        "children": [
+          {
+            "text": "GitHub"
+          }
+        ]
+      },
+      {
+        "text": "."
+      }
+    ]
+  }
+]

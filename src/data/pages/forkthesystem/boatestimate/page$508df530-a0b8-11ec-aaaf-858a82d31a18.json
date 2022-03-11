@@ -1,0 +1,42 @@
+[
+  {
+    "type": "H1",
+    "children": [
+      {
+        "text": "B.O.A.T. Estimate"
+      }
+    ]
+  },
+  {
+    "type": "paragraph",
+    "children": [
+      {
+        "text": "The Boat estimate is a technique to evaluate an estimated computation date.  It is very helpful in evaluating your and others' confidence in an estimate and is helpful in exposing many anti-patterns in estimates.  "
+      }
+    ]
+  },
+  {
+    "type": "paragraph",
+    "children": [
+      {
+        "text": ""
+      }
+    ]
+  },
+  {
+    "type": "paragraph",
+    "children": [
+      {
+        "text": "Let's walk through an example and the 3 steps to doing a BOAT."
+      }
+    ]
+  },
+  {
+    "type": "H2",
+    "children": [
+      {
+        "text": "Step 1: Pick a date"
+      }
+    ]
+  }
+]

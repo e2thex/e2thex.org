@@ -1,0 +1,97 @@
+[
+  {
+    "type": "H2",
+    "children": [
+      {
+        "text": "Rules to Keep in Mind"
+      }
+    ]
+  },
+  {
+    "type": "H3",
+    "children": [
+      {
+        "text": "Rule 1: Do not be precise"
+      }
+    ]
+  },
+  {
+    "type": "paragraph",
+    "children": [
+      {
+        "text": "This is a gut check! There is no way you are  23.567% sure that it will be on time.  Therefore, only use increments of 10% (e.g. 0% 10% 20% 30%, etc). I also like to allow a <1%, for the occasion when you can’t quite say 0%. The lack of precision helps prevent nitpicking at the margins; it is difficult to be nitpicky when moving 10% at a time.  "
+      }
+    ]
+  },
+  {
+    "type": "H3",
+    "children": [
+      {
+        "text": ""
+      }
+    ]
+  },
+  {
+    "type": "H3",
+    "children": [
+      {
+        "text": "Rule 2: Forget about the details"
+      }
+    ]
+  },
+  {
+    "type": "paragraph",
+    "children": [
+      {
+        "text": "Just like we are trying not to be to precise, don’t be too specific.  We often try and break big things down into smaller things that we feel like we can estimate, and then just add up those estimates, but that is not how life works. Just because one can swim 1.5k in 25 mins, bike 40k in 60 mins and run 10k in 35 mins does not mean they can do a triathlon in 2 hours.  This is your chance to think big."
+      }
+    ]
+  },
+  {
+    "type": "H3",
+    "children": [
+      {
+        "text": ""
+      }
+    ]
+  },
+  {
+    "type": "H3",
+    "children": [
+      {
+        "text": "Rule 3: No assuming away risks"
+      }
+    ]
+  },
+  {
+    "type": "AlignJustify",
+    "children": [
+      {
+        "text": "I used this exercise with a Project Manager and he thought for a second and then started assuming. “"
+      },
+      {
+        "text": "Assuming we get the team we want, and there is no feature scope creep, and the designer delivers on time, and the third party vendor has good documentation …",
+        "Italic": true
+      },
+      {
+        "text": "”"
+      }
+    ]
+  },
+  {
+    "type": "AlignJustify",
+    "children": [
+      {
+        "text": ""
+      }
+    ]
+  },
+  {
+    "type": "AlignJustify",
+    "children": [
+      {
+        "text": "This reminded me of an old economist joke:"
+      }
+    ]
+  }
+]

@@ -1,0 +1,26 @@
+[
+  {
+    "type": "paragraph",
+    "children": [
+      {
+        "text": "For each category estimate the percent chance that the project will be completed in the desired timeframe."
+      }
+    ]
+  },
+  {
+    "type": "paragraph",
+    "children": [
+      {
+        "text": ""
+      }
+    ]
+  },
+  {
+    "type": "paragraph",
+    "children": [
+      {
+        "text": "So for my API date, there’s a chance that we’ll finish early, but not a big chance. "
+      }
+    ]
+  }
+]
