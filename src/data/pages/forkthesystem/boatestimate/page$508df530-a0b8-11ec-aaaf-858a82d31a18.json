@@ -11,7 +11,7 @@
     "type": "paragraph",
     "children": [
       {
-        "text": "The Boat estimate is a technique to evaluate an estimated computation date.  It is very helpful in evaluating your and others' confidence in an estimate and is helpful in exposing many anti-patterns in estimates.  "
+        "text": "The Boat estimate is a technique to evaluate an estimated completion date. It is very helpful in evaluating confidence in an estimate and is helpful in exposing many anti-patterns in estimates.  "
       }
     ]
   },
