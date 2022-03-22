@@ -49,7 +49,10 @@
       },
       {
         "data": {
-          "openModal": true
+          "openModal": true,
+          "slatenode": {
+            "href": "/forkthesystem/boatestimate/"
+          }
         },
         "type": "Link",
         "children": [
