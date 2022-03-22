@@ -1,0 +1,85 @@
+[
+  {
+    "type": "H1",
+    "children": [
+      {
+        "text": "Estimate This For Me"
+      }
+    ]
+  },
+  {
+    "type": "paragraph",
+    "children": [
+      {
+        "text": "A "
+      },
+      {
+        "data": {
+          "openModal": true,
+          "slatenode": {
+            "href": "https://www.phase2technology.com/blog/estimate-pirate-use-old"
+          }
+        },
+        "type": "Link",
+        "children": [
+          {
+            "text": "few years ago"
+          }
+        ]
+      },
+      {
+        "text": " I started using an estimated technique called B.O.A.T.  "
+      },
+      {
+        "data": {
+          "openModal": true,
+          "slatenode": {
+            "href": "https://estimatethisfor.me"
+          }
+        },
+        "type": "Link",
+        "children": [
+          {
+            "text": "estimateThisFor.me"
+          }
+        ]
+      },
+      {
+        "text": " is a web app that allows groups of people to cooperatively make B.O.A.T Estimates.  I go into more detail about how to use it in my essay "
+      },
+      {
+        "data": {
+          "openModal": true,
+          "slatenode": {
+            "href": "/forkthesystem/boatestimate/"
+          }
+        },
+        "type": "Link",
+        "children": [
+          {
+            "text": "The BOAT Estimate"
+          }
+        ]
+      },
+      {
+        "text": "."
+      }
+    ]
+  },
+  {
+    "type": "H2",
+    "children": [
+      {
+        "text": "How it works"
+      }
+    ]
+  },
+  {
+    "type": "paragraph",
+    "children": [
+      {
+        "text": "The Creator Goes to the site and enters a title of what is being estimated."
+      }
+    ]
+  }
+]

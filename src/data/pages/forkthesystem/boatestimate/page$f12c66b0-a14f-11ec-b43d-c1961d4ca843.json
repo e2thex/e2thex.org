@@ -1,0 +1,35 @@
+[
+  {
+    "type": "H1",
+    "children": [
+      {
+        "text": "Finishing up"
+      }
+    ]
+  },
+  {
+    "type": "paragraph",
+    "children": [
+      {
+        "text": "This method can also be a great exercise for a team to do.  Much like Planning Poker it can help to allow us all to see each others perspective.  "
+      },
+      {
+        "data": {
+          "openModal": true,
+          "slatenode": {
+            "href": "https://estimatethisfor.me"
+          }
+        },
+        "type": "Link",
+        "children": [
+          {
+            "text": "Estimatethisfor.me"
+          }
+        ]
+      },
+      {
+        "text": " is a web app that can help facilitate such activity."
+      }
+    ]
+  }
+]

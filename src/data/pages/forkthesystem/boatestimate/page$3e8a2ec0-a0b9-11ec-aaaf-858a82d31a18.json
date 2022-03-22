@@ -1,0 +1,34 @@
+[
+  {
+    "type": "paragraph",
+    "children": [
+      {
+        "text": "Choose a date on which you plan to commit.  There are a variety of techniques to do this, but they are beyond the scope of this post.  If you do not have a date, write down your best guess."
+      }
+    ]
+  },
+  {
+    "type": "paragraph",
+    "children": [
+      {
+        "text": ""
+      }
+    ]
+  },
+  {
+    "type": "paragraph",
+    "children": [
+      {
+        "text": "For my API, I think it will be done by May 2."
+      }
+    ]
+  },
+  {
+    "type": "paragraph",
+    "children": [
+      {
+        "text": ""
+      }
+    ]
+  }
+]
